@@ -15,9 +15,10 @@
       --text: #eff3ff;
       --muted: #9aa7c9;
       --accent: #59c7ff;
-      --hug: #f7ae45;
+      --yes: #f7ae45;
       --omg: #a97eff;
-      --meh: #7d8698;
+      --yawn: #7d8698;
+      --nah: #ff6b7a;
       --reply: #67b9ff;
       --ok: #69f5ba;
       --danger: #ff7d93;
@@ -229,6 +230,10 @@
       border-color: rgba(163, 195, 255, 0.42);
     }
 
+    .card.yawned {
+      opacity: 0.4;
+    }
+
     .meta {
       display: flex;
       justify-content: space-between;
@@ -283,18 +288,23 @@
       background: rgba(11, 17, 32, 0.72);
       border-radius: 999px;
       color: #e7eeff;
-      height: 44px;
-      min-width: 60px;
-      padding: 0 14px;
+      height: 48px;
+      min-width: 64px;
+      padding: 0 18px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 7px;
+      gap: 8px;
       font-weight: 700;
-      font-size: 0.92rem;
+      font-size: 1rem;
       cursor: pointer;
       transition: all 0.2s ease;
       user-select: none;
+    }
+
+    .pill .emoji {
+      font-size: 1.3em;
+      line-height: 1;
     }
 
     .pill.reply {
@@ -302,10 +312,16 @@
       border-color: rgba(111, 184, 255, 0.45);
     }
 
-    .pill.active-hug {
+    .pill.active-yes {
       border-color: rgba(245, 174, 69, 0.8);
       box-shadow: 0 0 0 3px rgba(245, 174, 69, 0.23);
       color: #ffd499;
+    }
+
+    .pill.active-nah {
+      border-color: rgba(255, 107, 122, 0.88);
+      box-shadow: 0 0 0 3px rgba(255, 107, 122, 0.22);
+      color: #ffc7ce;
     }
 
     .pill.active-omg {
@@ -314,7 +330,7 @@
       color: #decfff;
     }
 
-    .pill.active-meh {
+    .pill.active-yawn {
       border-color: rgba(151, 162, 179, 0.82);
       box-shadow: 0 0 0 3px rgba(123, 133, 150, 0.2);
       color: #d2d8e4;
@@ -751,9 +767,10 @@
     "topic": "relationships",
     "timestamp": "16 hours ago",
     "reactions": {
-      "hug": 204,
-      "omg": 40,
-      "meh": 4
+      "yawn": 1,
+      "nah": 18,
+      "yes": 204,
+      "omg": 40
     },
     "replyCount": 4,
     "replies": [
@@ -763,7 +780,7 @@
         "text": "Pet custody should be standard in breakups.",
         "timestamp": "9m ago",
         "reactions": {
-          "hug": 6,
+          "yes": 6,
           "omg": 8
         },
         "isOP": true
@@ -774,7 +791,7 @@
         "text": "I cried at this because same.",
         "timestamp": "22m ago",
         "reactions": {
-          "hug": 15,
+          "yes": 15,
           "omg": 10
         },
         "isOP": false
@@ -785,7 +802,7 @@
         "text": "Dogs are always the best part of bad men.",
         "timestamp": "1h ago",
         "reactions": {
-          "hug": 5,
+          "yes": 5,
           "omg": 9
         },
         "isOP": false
@@ -796,7 +813,7 @@
         "text": "Hope you two reunite at a park by accident.",
         "timestamp": "3h ago",
         "reactions": {
-          "hug": 14,
+          "yes": 14,
           "omg": 1
         },
         "isOP": false
@@ -810,9 +827,10 @@
     "topic": "family",
     "timestamp": "6 hours ago",
     "reactions": {
-      "hug": 189,
-      "omg": 36,
-      "meh": 3
+      "yawn": 5,
+      "nah": 13,
+      "yes": 189,
+      "omg": 36
     },
     "replyCount": 4,
     "replies": [
@@ -822,7 +840,7 @@
         "text": "Late diagnosis is grieving and relief at the same time.",
         "timestamp": "9m ago",
         "reactions": {
-          "hug": 10,
+          "yes": 10,
           "omg": 9
         },
         "isOP": false
@@ -833,7 +851,7 @@
         "text": "You're not broken. your brain just needed the right map.",
         "timestamp": "22m ago",
         "reactions": {
-          "hug": 4,
+          "yes": 4,
           "omg": 0
         },
         "isOP": false
@@ -844,7 +862,7 @@
         "text": "Same timeline for me. changed my life.",
         "timestamp": "1h ago",
         "reactions": {
-          "hug": 7,
+          "yes": 7,
           "omg": 1
         },
         "isOP": false
@@ -855,7 +873,7 @@
         "text": "Gifted kid to exhausted adult pipeline is real.",
         "timestamp": "3h ago",
         "reactions": {
-          "hug": 24,
+          "yes": 24,
           "omg": 8
         },
         "isOP": false
@@ -869,9 +887,10 @@
     "topic": "social",
     "timestamp": "2 hours ago",
     "reactions": {
-      "hug": 173,
-      "omg": 33,
-      "meh": 2
+      "yawn": 10,
+      "nah": 7,
+      "yes": 173,
+      "omg": 33
     },
     "replyCount": 4,
     "replies": [
@@ -881,7 +900,7 @@
         "text": "This is painfully honest.",
         "timestamp": "9m ago",
         "reactions": {
-          "hug": 14,
+          "yes": 14,
           "omg": 9
         },
         "isOP": false
@@ -892,7 +911,7 @@
         "text": "Receiving care is harder than posting about pain.",
         "timestamp": "22m ago",
         "reactions": {
-          "hug": 21,
+          "yes": 21,
           "omg": 6
         },
         "isOP": false
@@ -903,7 +922,7 @@
         "text": "Small step: reply with one sentence. that's enough.",
         "timestamp": "1h ago",
         "reactions": {
-          "hug": 23,
+          "yes": 23,
           "omg": 4
         },
         "isOP": false
@@ -914,7 +933,7 @@
         "text": "You're not manipulative, you're scared.",
         "timestamp": "3h ago",
         "reactions": {
-          "hug": 22,
+          "yes": 22,
           "omg": 8
         },
         "isOP": false
@@ -928,9 +947,10 @@
     "topic": "health",
     "timestamp": "10 hours ago",
     "reactions": {
-      "hug": 161,
-      "omg": 67,
-      "meh": 4
+      "yawn": 11,
+      "nah": 30,
+      "yes": 161,
+      "omg": 67
     },
     "replyCount": 4,
     "replies": [
@@ -940,7 +960,7 @@
         "text": "Therapy about lying in therapy is still progress.",
         "timestamp": "9m ago",
         "reactions": {
-          "hug": 15,
+          "yes": 15,
           "omg": 5
         },
         "isOP": false
@@ -951,7 +971,7 @@
         "text": "Please tell them this exact sentence next session.",
         "timestamp": "22m ago",
         "reactions": {
-          "hug": 16,
+          "yes": 16,
           "omg": 8
         },
         "isOP": false
@@ -962,7 +982,7 @@
         "text": "You're paying to perform pain. been there.",
         "timestamp": "1h ago",
         "reactions": {
-          "hug": 8,
+          "yes": 8,
           "omg": 4
         },
         "isOP": false
@@ -973,7 +993,7 @@
         "text": "The honesty in this confession is a start.",
         "timestamp": "3h ago",
         "reactions": {
-          "hug": 4,
+          "yes": 4,
           "omg": 5
         },
         "isOP": false
@@ -987,9 +1007,10 @@
     "topic": "health",
     "timestamp": "7 hours ago",
     "reactions": {
-      "hug": 166,
-      "omg": 54,
-      "meh": 6
+      "yawn": 13,
+      "nah": 18,
+      "yes": 166,
+      "omg": 54
     },
     "replyCount": 4,
     "replies": [
@@ -999,7 +1020,7 @@
         "text": "Screaming in the car is cheaper than therapy and somehow worse.",
         "timestamp": "9m ago",
         "reactions": {
-          "hug": 21,
+          "yes": 21,
           "omg": 5
         },
         "isOP": true
@@ -1010,7 +1031,7 @@
         "text": "I've done this in parking garages for years.",
         "timestamp": "22m ago",
         "reactions": {
-          "hug": 10,
+          "yes": 10,
           "omg": 7
         },
         "isOP": false
@@ -1021,7 +1042,7 @@
         "text": "Please also drink water. rage dehydration is real.",
         "timestamp": "1h ago",
         "reactions": {
-          "hug": 23,
+          "yes": 23,
           "omg": 8
         },
         "isOP": false
@@ -1032,7 +1053,7 @@
         "text": "If this isn't burnout, what is?",
         "timestamp": "3h ago",
         "reactions": {
-          "hug": 10,
+          "yes": 10,
           "omg": 8
         },
         "isOP": false
@@ -1046,9 +1067,10 @@
     "topic": "family",
     "timestamp": "1 day ago",
     "reactions": {
-      "hug": 183,
-      "omg": 51,
-      "meh": 5
+      "yawn": 2,
+      "nah": 19,
+      "yes": 183,
+      "omg": 51
     },
     "replyCount": 4,
     "replies": [
@@ -1058,7 +1080,7 @@
         "text": "Family PR is exhausting.",
         "timestamp": "9m ago",
         "reactions": {
-          "hug": 22,
+          "yes": 22,
           "omg": 3
         },
         "isOP": false
@@ -1069,7 +1091,7 @@
         "text": "My cousins do this too. annual holiday peace treaty.",
         "timestamp": "22m ago",
         "reactions": {
-          "hug": 15,
+          "yes": 15,
           "omg": 8
         },
         "isOP": false
@@ -1080,7 +1102,7 @@
         "text": "Pretend harmony is such a common survival tactic.",
         "timestamp": "1h ago",
         "reactions": {
-          "hug": 16,
+          "yes": 16,
           "omg": 2
         },
         "isOP": false
@@ -1091,7 +1113,7 @@
         "text": "I hope you two get a real conversation someday.",
         "timestamp": "3h ago",
         "reactions": {
-          "hug": 10,
+          "yes": 10,
           "omg": 7
         },
         "isOP": false
@@ -1105,9 +1127,10 @@
     "topic": "money",
     "timestamp": "11 hours ago",
     "reactions": {
-      "hug": 154,
-      "omg": 62,
-      "meh": 8
+      "yawn": 9,
+      "nah": 16,
+      "yes": 154,
+      "omg": 62
     },
     "replyCount": 3,
     "replies": [
@@ -1117,7 +1140,7 @@
         "text": "Data-driven pettiness is my love language.",
         "timestamp": "9m ago",
         "reactions": {
-          "hug": 7,
+          "yes": 7,
           "omg": 1
         },
         "isOP": false
@@ -1128,7 +1151,7 @@
         "text": "Send invoices quarterly.",
         "timestamp": "22m ago",
         "reactions": {
-          "hug": 13,
+          "yes": 13,
           "omg": 6
         },
         "isOP": false
@@ -1139,7 +1162,7 @@
         "text": "I stopped spotting people and my stress dropped instantly.",
         "timestamp": "1h ago",
         "reactions": {
-          "hug": 23,
+          "yes": 23,
           "omg": 1
         },
         "isOP": false
@@ -1153,9 +1176,10 @@
     "topic": "funny",
     "timestamp": "8 hours ago",
     "reactions": {
-      "hug": 97,
-      "omg": 128,
-      "meh": 6
+      "yawn": 6,
+      "nah": 30,
+      "yes": 97,
+      "omg": 128
     },
     "replyCount": 4,
     "replies": [
@@ -1165,7 +1189,7 @@
         "text": "This is either fate or blackmail.",
         "timestamp": "9m ago",
         "reactions": {
-          "hug": 21,
+          "yes": 21,
           "omg": 0
         },
         "isOP": false
@@ -1176,7 +1200,7 @@
         "text": "Honesty speedrun worked for you somehow.",
         "timestamp": "22m ago",
         "reactions": {
-          "hug": 15,
+          "yes": 15,
           "omg": 2
         },
         "isOP": false
@@ -1187,7 +1211,7 @@
         "text": "Need the exact transcript for science.",
         "timestamp": "1h ago",
         "reactions": {
-          "hug": 6,
+          "yes": 6,
           "omg": 10
         },
         "isOP": false
@@ -1198,7 +1222,7 @@
         "text": "If they stayed after that, keep them.",
         "timestamp": "3h ago",
         "reactions": {
-          "hug": 20,
+          "yes": 20,
           "omg": 10
         },
         "isOP": false
@@ -1212,9 +1236,10 @@
     "topic": "funny",
     "timestamp": "40 minutes ago",
     "reactions": {
-      "hug": 141,
-      "omg": 39,
-      "meh": 4
+      "yawn": 8,
+      "nah": 15,
+      "yes": 141,
+      "omg": 39
     },
     "replyCount": 3,
     "replies": [
@@ -1224,7 +1249,7 @@
         "text": "You accidentally created a workplace character.",
         "timestamp": "9m ago",
         "reactions": {
-          "hug": 22,
+          "yes": 22,
           "omg": 2
         },
         "isOP": true
@@ -1235,7 +1260,7 @@
         "text": "Method acting but for employment.",
         "timestamp": "22m ago",
         "reactions": {
-          "hug": 13,
+          "yes": 13,
           "omg": 2
         },
         "isOP": false
@@ -1246,7 +1271,7 @@
         "text": "This is me every all-hands call.",
         "timestamp": "1h ago",
         "reactions": {
-          "hug": 12,
+          "yes": 12,
           "omg": 3
         },
         "isOP": false
@@ -1260,9 +1285,10 @@
     "topic": "social",
     "timestamp": "9 minutes ago",
     "reactions": {
-      "hug": 147,
-      "omg": 22,
-      "meh": 3
+      "yawn": 15,
+      "nah": 5,
+      "yes": 147,
+      "omg": 22
     },
     "replyCount": 4,
     "replies": [
@@ -1272,7 +1298,7 @@
         "text": "This is modern anxiety in one sentence.",
         "timestamp": "9m ago",
         "reactions": {
-          "hug": 17,
+          "yes": 17,
           "omg": 7
         },
         "isOP": false
@@ -1283,7 +1309,7 @@
         "text": "Mute is peace, FOMO is war.",
         "timestamp": "22m ago",
         "reactions": {
-          "hug": 20,
+          "yes": 20,
           "omg": 10
         },
         "isOP": false
@@ -1294,7 +1320,7 @@
         "text": "I archive chats then stalk notifications anyway.",
         "timestamp": "1h ago",
         "reactions": {
-          "hug": 23,
+          "yes": 23,
           "omg": 8
         },
         "isOP": false
@@ -1305,7 +1331,7 @@
         "text": "You're not alone in this spiral.",
         "timestamp": "3h ago",
         "reactions": {
-          "hug": 7,
+          "yes": 7,
           "omg": 3
         },
         "isOP": false
@@ -1319,9 +1345,10 @@
     "topic": "relationships",
     "timestamp": "4 hours ago",
     "reactions": {
-      "hug": 135,
-      "omg": 47,
-      "meh": 12
+      "yawn": 2,
+      "nah": 17,
+      "yes": 135,
+      "omg": 47
     },
     "replyCount": 4,
     "replies": [
@@ -1331,7 +1358,7 @@
         "text": "Digital astrology for heartbreak.",
         "timestamp": "9m ago",
         "reactions": {
-          "hug": 9,
+          "yes": 9,
           "omg": 1
         },
         "isOP": false
@@ -1342,7 +1369,7 @@
         "text": "I used to do this with Spotify too. zero shame.",
         "timestamp": "22m ago",
         "reactions": {
-          "hug": 23,
+          "yes": 23,
           "omg": 4
         },
         "isOP": false
@@ -1353,7 +1380,7 @@
         "text": "This is creepy and also kind of poetic.",
         "timestamp": "1h ago",
         "reactions": {
-          "hug": 6,
+          "yes": 6,
           "omg": 0
         },
         "isOP": false
@@ -1364,7 +1391,7 @@
         "text": "Block and heal. kindly.",
         "timestamp": "3h ago",
         "reactions": {
-          "hug": 7,
+          "yes": 7,
           "omg": 6
         },
         "isOP": false
@@ -1378,9 +1405,10 @@
     "topic": "relationships",
     "timestamp": "3 hours ago",
     "reactions": {
-      "hug": 118,
-      "omg": 49,
-      "meh": 5
+      "yawn": 14,
+      "nah": 12,
+      "yes": 118,
+      "omg": 49
     },
     "replyCount": 4,
     "replies": [
@@ -1390,7 +1418,7 @@
         "text": "That line hit too close. Parking lots became my therapy too.",
         "timestamp": "9m ago",
         "reactions": {
-          "hug": 20,
+          "yes": 20,
           "omg": 3
         },
         "isOP": false
@@ -1401,7 +1429,7 @@
         "text": "I thought I was the only one doing fake overtime to breathe.",
         "timestamp": "22m ago",
         "reactions": {
-          "hug": 17,
+          "yes": 17,
           "omg": 0
         },
         "isOP": false
@@ -1412,7 +1440,7 @@
         "text": "This is sad but weirdly real. Hope you found a way out.",
         "timestamp": "1h ago",
         "reactions": {
-          "hug": 13,
+          "yes": 13,
           "omg": 6
         },
         "isOP": false
@@ -1423,7 +1451,7 @@
         "text": "I did this during my engagement and still got married anyway. Mistake.",
         "timestamp": "3h ago",
         "reactions": {
-          "hug": 7,
+          "yes": 7,
           "omg": 3
         },
         "isOP": false
@@ -1437,9 +1465,10 @@
     "topic": "work",
     "timestamp": "1 hour ago",
     "reactions": {
-      "hug": 92,
-      "omg": 84,
-      "meh": 9
+      "yawn": 10,
+      "nah": 29,
+      "yes": 92,
+      "omg": 84
     },
     "replyCount": 4,
     "replies": [
@@ -1449,7 +1478,7 @@
         "text": "Corporate survival skill unlocked.",
         "timestamp": "9m ago",
         "reactions": {
-          "hug": 14,
+          "yes": 14,
           "omg": 7
         },
         "isOP": true
@@ -1460,7 +1489,7 @@
         "text": "Same. My weekly report is basically copy/paste theater.",
         "timestamp": "22m ago",
         "reactions": {
-          "hug": 6,
+          "yes": 6,
           "omg": 9
         },
         "isOP": false
@@ -1471,7 +1500,7 @@
         "text": "Don't expose us all at once.",
         "timestamp": "1h ago",
         "reactions": {
-          "hug": 2,
+          "yes": 2,
           "omg": 0
         },
         "isOP": false
@@ -1482,7 +1511,7 @@
         "text": "You deserve a raise for being efficient, not punished with extra work.",
         "timestamp": "3h ago",
         "reactions": {
-          "hug": 5,
+          "yes": 5,
           "omg": 3
         },
         "isOP": false
@@ -1496,9 +1525,10 @@
     "topic": "funny",
     "timestamp": "15 hours ago",
     "reactions": {
-      "hug": 132,
-      "omg": 42,
-      "meh": 6
+      "yawn": 14,
+      "nah": 19,
+      "yes": 132,
+      "omg": 42
     },
     "replyCount": 4,
     "replies": [
@@ -1508,7 +1538,7 @@
         "text": "Cat-assisted boundaries are elite.",
         "timestamp": "9m ago",
         "reactions": {
-          "hug": 5,
+          "yes": 5,
           "omg": 3
         },
         "isOP": false
@@ -1519,7 +1549,7 @@
         "text": "Stealing this. sorry not sorry.",
         "timestamp": "22m ago",
         "reactions": {
-          "hug": 13,
+          "yes": 13,
           "omg": 5
         },
         "isOP": false
@@ -1530,7 +1560,7 @@
         "text": "Your cat definitely knows it's part of the lie.",
         "timestamp": "1h ago",
         "reactions": {
-          "hug": 24,
+          "yes": 24,
           "omg": 2
         },
         "isOP": false
@@ -1541,7 +1571,7 @@
         "text": "I use 'early gym.' cat is way better.",
         "timestamp": "3h ago",
         "reactions": {
-          "hug": 7,
+          "yes": 7,
           "omg": 4
         },
         "isOP": false
@@ -1555,9 +1585,10 @@
     "topic": "money",
     "timestamp": "3 hours ago",
     "reactions": {
-      "hug": 109,
-      "omg": 58,
-      "meh": 9
+      "yawn": 10,
+      "nah": 22,
+      "yes": 109,
+      "omg": 58
     },
     "replyCount": 4,
     "replies": [
@@ -1567,7 +1598,7 @@
         "text": "Boundaries with a fake budget is still boundaries.",
         "timestamp": "9m ago",
         "reactions": {
-          "hug": 8,
+          "yes": 8,
           "omg": 10
         },
         "isOP": false
@@ -1578,7 +1609,7 @@
         "text": "Just say no. lying scales badly.",
         "timestamp": "22m ago",
         "reactions": {
-          "hug": 20,
+          "yes": 20,
           "omg": 7
         },
         "isOP": false
@@ -1589,7 +1620,7 @@
         "text": "Expensive dinner friends vanish when checks arrive.",
         "timestamp": "1h ago",
         "reactions": {
-          "hug": 8,
+          "yes": 8,
           "omg": 9
         },
         "isOP": false
@@ -1600,7 +1631,7 @@
         "text": "I feel seen and attacked.",
         "timestamp": "3h ago",
         "reactions": {
-          "hug": 10,
+          "yes": 10,
           "omg": 9
         },
         "isOP": false
@@ -1614,9 +1645,10 @@
     "topic": "relationships",
     "timestamp": "12 hours ago",
     "reactions": {
-      "hug": 111,
-      "omg": 92,
-      "meh": 3
+      "yawn": 3,
+      "nah": 27,
+      "yes": 111,
+      "omg": 92
     },
     "replyCount": 4,
     "replies": [
@@ -1626,7 +1658,7 @@
         "text": "If guilt is this loud, you already know what you need to do.",
         "timestamp": "12m ago",
         "reactions": {
-          "hug": 6,
+          "yes": 6,
           "omg": 10
         },
         "isOP": false
@@ -1637,7 +1669,7 @@
         "text": "Please don't normalize suffering as loyalty.",
         "timestamp": "2h ago",
         "reactions": {
-          "hug": 3,
+          "yes": 3,
           "omg": 10
         },
         "isOP": false
@@ -1648,7 +1680,7 @@
         "text": "I stayed for appearances too and it wrecked me.",
         "timestamp": "2h ago",
         "reactions": {
-          "hug": 21,
+          "yes": 21,
           "omg": 14
         },
         "isOP": false
@@ -1659,7 +1691,7 @@
         "text": "This is messy and painfully human.",
         "timestamp": "5h ago",
         "reactions": {
-          "hug": 4,
+          "yes": 4,
           "omg": 2
         },
         "isOP": false
@@ -1673,9 +1705,10 @@
     "topic": "money",
     "timestamp": "20 hours ago",
     "reactions": {
-      "hug": 179,
-      "omg": 176,
-      "meh": 18
+      "yawn": 15,
+      "nah": 13,
+      "yes": 179,
+      "omg": 176
     },
     "replyCount": 5,
     "replies": [
@@ -1685,7 +1718,7 @@
         "text": "Please make a plan before it gets bigger.",
         "timestamp": "1h ago",
         "reactions": {
-          "hug": 18,
+          "yes": 18,
           "omg": 10
         },
         "isOP": false
@@ -1696,7 +1729,7 @@
         "text": "Financial fear makes people lie fast.",
         "timestamp": "28m ago",
         "reactions": {
-          "hug": 4,
+          "yes": 4,
           "omg": 5
         },
         "isOP": false
@@ -1707,7 +1740,7 @@
         "text": "I get why you did it, but this can explode.",
         "timestamp": "9h ago",
         "reactions": {
-          "hug": 1,
+          "yes": 1,
           "omg": 6
         },
         "isOP": false
@@ -1718,7 +1751,7 @@
         "text": "Money secrets destroy trust quietly.",
         "timestamp": "28m ago",
         "reactions": {
-          "hug": 13,
+          "yes": 13,
           "omg": 14
         },
         "isOP": false
@@ -1729,7 +1762,7 @@
         "text": "This is more common than people admit.",
         "timestamp": "12m ago",
         "reactions": {
-          "hug": 17,
+          "yes": 17,
           "omg": 12
         },
         "isOP": false
@@ -1743,9 +1776,10 @@
     "topic": "crime",
     "timestamp": "3 days ago",
     "reactions": {
-      "hug": 85,
-      "omg": 57,
-      "meh": 17
+      "yawn": 0,
+      "nah": 7,
+      "yes": 85,
+      "omg": 57
     },
     "replyCount": 4,
     "replies": [
@@ -1755,7 +1789,7 @@
         "text": "This could go very wrong if traced.",
         "timestamp": "12m ago",
         "reactions": {
-          "hug": 10,
+          "yes": 10,
           "omg": 2
         },
         "isOP": false
@@ -1766,7 +1800,7 @@
         "text": "Moral gray zone speedrun.",
         "timestamp": "5h ago",
         "reactions": {
-          "hug": 2,
+          "yes": 2,
           "omg": 8
         },
         "isOP": false
@@ -1777,7 +1811,7 @@
         "text": "I laughed and then felt bad.",
         "timestamp": "1h ago",
         "reactions": {
-          "hug": 1,
+          "yes": 1,
           "omg": 5
         },
         "isOP": false
@@ -1788,7 +1822,7 @@
         "text": "Petty revenge is still revenge.",
         "timestamp": "1h ago",
         "reactions": {
-          "hug": 1,
+          "yes": 1,
           "omg": 3
         },
         "isOP": false
@@ -1802,9 +1836,10 @@
     "topic": "family",
     "timestamp": "3 days ago",
     "reactions": {
-      "hug": 126,
-      "omg": 159,
-      "meh": 18
+      "yawn": 8,
+      "nah": 14,
+      "yes": 126,
+      "omg": 159
     },
     "replyCount": 4,
     "replies": [
@@ -1814,7 +1849,7 @@
         "text": "You're not evil for feeling complicated things.",
         "timestamp": "2h ago",
         "reactions": {
-          "hug": 21,
+          "yes": 21,
           "omg": 8
         },
         "isOP": false
@@ -1825,7 +1860,7 @@
         "text": "We all perform normal for our parents.",
         "timestamp": "2h ago",
         "reactions": {
-          "hug": 6,
+          "yes": 6,
           "omg": 13
         },
         "isOP": false
@@ -1836,7 +1871,7 @@
         "text": "This one hurt to read.",
         "timestamp": "9h ago",
         "reactions": {
-          "hug": 22,
+          "yes": 22,
           "omg": 12
         },
         "isOP": false
@@ -1847,7 +1882,7 @@
         "text": "Family roles trap people for decades.",
         "timestamp": "12m ago",
         "reactions": {
-          "hug": 4,
+          "yes": 4,
           "omg": 1
         },
         "isOP": false
@@ -1861,9 +1896,10 @@
     "topic": "work",
     "timestamp": "12 hours ago",
     "reactions": {
-      "hug": 74,
-      "omg": 81,
-      "meh": 14
+      "yawn": 11,
+      "nah": 25,
+      "yes": 74,
+      "omg": 81
     },
     "replyCount": 6,
     "replies": [
@@ -1873,7 +1909,7 @@
         "text": "You're surviving a broken system, not failing.",
         "timestamp": "9h ago",
         "reactions": {
-          "hug": 4,
+          "yes": 4,
           "omg": 14
         },
         "isOP": false
@@ -1884,7 +1920,7 @@
         "text": "Document everything and protect yourself.",
         "timestamp": "5h ago",
         "reactions": {
-          "hug": 14,
+          "yes": 14,
           "omg": 7
         },
         "isOP": false
@@ -1895,7 +1931,7 @@
         "text": "Corporate theater is exhausting.",
         "timestamp": "9h ago",
         "reactions": {
-          "hug": 12,
+          "yes": 12,
           "omg": 13
         },
         "isOP": false
@@ -1906,7 +1942,7 @@
         "text": "I laughed because this is every office ever.",
         "timestamp": "1h ago",
         "reactions": {
-          "hug": 3,
+          "yes": 3,
           "omg": 3
         },
         "isOP": false
@@ -1917,7 +1953,7 @@
         "text": "This belongs in a workplace confessions book.",
         "timestamp": "9h ago",
         "reactions": {
-          "hug": 3,
+          "yes": 3,
           "omg": 4
         },
         "isOP": false
@@ -1927,7 +1963,7 @@
         "user": "ColdCoffee",
         "timestamp": "2h ago",
         "reactions": {
-          "hug": 1,
+          "yes": 1,
           "omg": 12
         },
         "isOP": false
@@ -1941,9 +1977,10 @@
     "topic": "school",
     "timestamp": "12 hours ago",
     "reactions": {
-      "hug": 130,
-      "omg": 126,
-      "meh": 4
+      "yawn": 11,
+      "nah": 16,
+      "yes": 130,
+      "omg": 126
     },
     "replyCount": 6,
     "replies": [
@@ -1953,7 +1990,7 @@
         "text": "You should probably never tweet this from your real account.",
         "timestamp": "5h ago",
         "reactions": {
-          "hug": 3,
+          "yes": 3,
           "omg": 7
         },
         "isOP": false
@@ -1964,7 +2001,7 @@
         "text": "I can't decide if this is genius or terrifying.",
         "timestamp": "5h ago",
         "reactions": {
-          "hug": 17,
+          "yes": 17,
           "omg": 11
         },
         "isOP": false
@@ -1975,7 +2012,7 @@
         "text": "The system rewards outcomes, not integrity.",
         "timestamp": "2h ago",
         "reactions": {
-          "hug": 9,
+          "yes": 9,
           "omg": 8
         },
         "isOP": false
@@ -1986,7 +2023,7 @@
         "text": "Student survival mode is wild.",
         "timestamp": "12m ago",
         "reactions": {
-          "hug": 3,
+          "yes": 3,
           "omg": 5
         },
         "isOP": false
@@ -1997,7 +2034,7 @@
         "text": "Academic pressure turns people feral.",
         "timestamp": "12m ago",
         "reactions": {
-          "hug": 17,
+          "yes": 17,
           "omg": 9
         },
         "isOP": false
@@ -2007,7 +2044,7 @@
         "user": "SleepyRiot",
         "timestamp": "9h ago",
         "reactions": {
-          "hug": 4,
+          "yes": 4,
           "omg": 14
         },
         "isOP": false
@@ -2021,9 +2058,10 @@
     "topic": "health",
     "timestamp": "32 minutes ago",
     "reactions": {
-      "hug": 135,
-      "omg": 36,
-      "meh": 2
+      "yawn": 12,
+      "nah": 14,
+      "yes": 135,
+      "omg": 36
     },
     "replyCount": 5,
     "replies": [
@@ -2033,7 +2071,7 @@
         "text": "This sounds like burnout wearing a mask.",
         "timestamp": "1h ago",
         "reactions": {
-          "hug": 9,
+          "yes": 9,
           "omg": 9
         },
         "isOP": false
@@ -2044,7 +2082,7 @@
         "text": "You deserve support, not just coping tricks.",
         "timestamp": "12m ago",
         "reactions": {
-          "hug": 4,
+          "yes": 4,
           "omg": 9
         },
         "isOP": false
@@ -2055,7 +2093,7 @@
         "text": "Thank you for saying the quiet part out loud.",
         "timestamp": "12m ago",
         "reactions": {
-          "hug": 16,
+          "yes": 16,
           "omg": 11
         },
         "isOP": false
@@ -2066,7 +2104,7 @@
         "text": "Please be gentler with yourself.",
         "timestamp": "1h ago",
         "reactions": {
-          "hug": 12,
+          "yes": 12,
           "omg": 11
         },
         "isOP": false
@@ -2077,7 +2115,7 @@
         "text": "Your body is waving red flags.",
         "timestamp": "9h ago",
         "reactions": {
-          "hug": 10,
+          "yes": 10,
           "omg": 0
         },
         "isOP": false
@@ -2091,9 +2129,10 @@
     "topic": "relationships",
     "timestamp": "1 day ago",
     "reactions": {
-      "hug": 205,
-      "omg": 89,
-      "meh": 19
+      "yawn": 3,
+      "nah": 10,
+      "yes": 205,
+      "omg": 89
     },
     "replyCount": 5,
     "replies": [
@@ -2103,7 +2142,7 @@
         "text": "Honesty now hurts less than truth later.",
         "timestamp": "1h ago",
         "reactions": {
-          "hug": 20,
+          "yes": 20,
           "omg": 1
         },
         "isOP": false
@@ -2114,7 +2153,7 @@
         "text": "I stayed for appearances too and it wrecked me.",
         "timestamp": "12m ago",
         "reactions": {
-          "hug": 5,
+          "yes": 5,
           "omg": 3
         },
         "isOP": false
@@ -2125,7 +2164,7 @@
         "text": "Please don't normalize suffering as loyalty.",
         "timestamp": "9h ago",
         "reactions": {
-          "hug": 18,
+          "yes": 18,
           "omg": 0
         },
         "isOP": false
@@ -2136,7 +2175,7 @@
         "text": "This is messy and painfully human.",
         "timestamp": "28m ago",
         "reactions": {
-          "hug": 3,
+          "yes": 3,
           "omg": 3
         },
         "isOP": false
@@ -2147,7 +2186,7 @@
         "text": "If guilt is this loud, you already know what you need to do.",
         "timestamp": "9h ago",
         "reactions": {
-          "hug": 5,
+          "yes": 5,
           "omg": 14
         },
         "isOP": false
@@ -2161,9 +2200,10 @@
     "topic": "funny",
     "timestamp": "15 minutes ago",
     "reactions": {
-      "hug": 171,
-      "omg": 139,
-      "meh": 7
+      "yawn": 14,
+      "nah": 7,
+      "yes": 171,
+      "omg": 139
     },
     "replyCount": 6,
     "replies": [
@@ -2173,7 +2213,7 @@
         "text": "This is chaotic but harmless and I love it.",
         "timestamp": "9h ago",
         "reactions": {
-          "hug": 3,
+          "yes": 3,
           "omg": 5
         },
         "isOP": false
@@ -2184,7 +2224,7 @@
         "text": "Please never stop being this weird.",
         "timestamp": "12m ago",
         "reactions": {
-          "hug": 9,
+          "yes": 9,
           "omg": 12
         },
         "isOP": false
@@ -2195,7 +2235,7 @@
         "text": "Funniest confession tonight.",
         "timestamp": "1h ago",
         "reactions": {
-          "hug": 16,
+          "yes": 16,
           "omg": 2
         },
         "isOP": false
@@ -2206,7 +2246,7 @@
         "text": "You accidentally built a whole character arc.",
         "timestamp": "1h ago",
         "reactions": {
-          "hug": 11,
+          "yes": 11,
           "omg": 14
         },
         "isOP": false
@@ -2217,7 +2257,7 @@
         "text": "I am crying laughing.",
         "timestamp": "28m ago",
         "reactions": {
-          "hug": 17,
+          "yes": 17,
           "omg": 4
         },
         "isOP": false
@@ -2227,7 +2267,7 @@
         "user": "LittleThunder",
         "timestamp": "28m ago",
         "reactions": {
-          "hug": 8,
+          "yes": 8,
           "omg": 8
         },
         "isOP": false
@@ -2241,9 +2281,10 @@
     "topic": "social",
     "timestamp": "15 minutes ago",
     "reactions": {
-      "hug": 155,
-      "omg": 24,
-      "meh": 4
+      "yawn": 9,
+      "nah": 19,
+      "yes": 155,
+      "omg": 24
     },
     "replyCount": 5,
     "replies": [
@@ -2253,7 +2294,7 @@
         "text": "I do this too and hate it.",
         "timestamp": "12m ago",
         "reactions": {
-          "hug": 14,
+          "yes": 14,
           "omg": 10
         },
         "isOP": false
@@ -2264,7 +2305,7 @@
         "text": "Social media rewards masks, not honesty.",
         "timestamp": "2h ago",
         "reactions": {
-          "hug": 14,
+          "yes": 14,
           "omg": 5
         },
         "isOP": false
@@ -2275,7 +2316,7 @@
         "text": "Internet persona vs real life is too real.",
         "timestamp": "2h ago",
         "reactions": {
-          "hug": 22,
+          "yes": 22,
           "omg": 11
         },
         "isOP": false
@@ -2286,7 +2327,7 @@
         "text": "This made me put my phone down for a minute.",
         "timestamp": "5h ago",
         "reactions": {
-          "hug": 20,
+          "yes": 20,
           "omg": 2
         },
         "isOP": false
@@ -2297,7 +2338,7 @@
         "text": "You're not alone in this split.",
         "timestamp": "1h ago",
         "reactions": {
-          "hug": 16,
+          "yes": 16,
           "omg": 13
         },
         "isOP": false
@@ -2311,9 +2352,10 @@
     "topic": "work",
     "timestamp": "15 minutes ago",
     "reactions": {
-      "hug": 226,
-      "omg": 106,
-      "meh": 21
+      "yawn": 13,
+      "nah": 16,
+      "yes": 226,
+      "omg": 106
     },
     "replyCount": 6,
     "replies": [
@@ -2323,7 +2365,7 @@
         "text": "Corporate theater is exhausting.",
         "timestamp": "2h ago",
         "reactions": {
-          "hug": 10,
+          "yes": 10,
           "omg": 0
         },
         "isOP": false
@@ -2334,7 +2376,7 @@
         "text": "This belongs in a workplace confessions book.",
         "timestamp": "9h ago",
         "reactions": {
-          "hug": 21,
+          "yes": 21,
           "omg": 8
         },
         "isOP": false
@@ -2345,7 +2387,7 @@
         "text": "I laughed because this is every office ever.",
         "timestamp": "5h ago",
         "reactions": {
-          "hug": 21,
+          "yes": 21,
           "omg": 1
         },
         "isOP": false
@@ -2356,7 +2398,7 @@
         "text": "Document everything and protect yourself.",
         "timestamp": "12m ago",
         "reactions": {
-          "hug": 18,
+          "yes": 18,
           "omg": 12
         },
         "isOP": false
@@ -2367,7 +2409,7 @@
         "text": "You're surviving a broken system, not failing.",
         "timestamp": "28m ago",
         "reactions": {
-          "hug": 10,
+          "yes": 10,
           "omg": 12
         },
         "isOP": false
@@ -2377,7 +2419,7 @@
         "user": "BlueVenom",
         "timestamp": "12m ago",
         "reactions": {
-          "hug": 10,
+          "yes": 10,
           "omg": 4
         },
         "isOP": false
@@ -2391,9 +2433,10 @@
     "topic": "crime",
     "timestamp": "15 minutes ago",
     "reactions": {
-      "hug": 173,
-      "omg": 59,
-      "meh": 5
+      "yawn": 3,
+      "nah": 30,
+      "yes": 173,
+      "omg": 59
     },
     "replyCount": 5,
     "replies": [
@@ -2403,7 +2446,7 @@
         "text": "Petty revenge is still revenge.",
         "timestamp": "5h ago",
         "reactions": {
-          "hug": 8,
+          "yes": 8,
           "omg": 3
         },
         "isOP": false
@@ -2414,7 +2457,7 @@
         "text": "Delete this and call nobody 😂",
         "timestamp": "5h ago",
         "reactions": {
-          "hug": 5,
+          "yes": 5,
           "omg": 11
         },
         "isOP": false
@@ -2425,7 +2468,7 @@
         "text": "This could go very wrong if traced.",
         "timestamp": "2h ago",
         "reactions": {
-          "hug": 22,
+          "yes": 22,
           "omg": 4
         },
         "isOP": false
@@ -2436,7 +2479,7 @@
         "text": "I laughed and then felt bad.",
         "timestamp": "9h ago",
         "reactions": {
-          "hug": 8,
+          "yes": 8,
           "omg": 1
         },
         "isOP": false
@@ -2447,7 +2490,7 @@
         "text": "Moral gray zone speedrun.",
         "timestamp": "12m ago",
         "reactions": {
-          "hug": 19,
+          "yes": 19,
           "omg": 13
         },
         "isOP": false
@@ -2461,9 +2504,10 @@
     "topic": "money",
     "timestamp": "12 hours ago",
     "reactions": {
-      "hug": 91,
-      "omg": 23,
-      "meh": 13
+      "yawn": 12,
+      "nah": 7,
+      "yes": 91,
+      "omg": 23
     },
     "replyCount": 5,
     "replies": [
@@ -2473,7 +2517,7 @@
         "text": "I get why you did it, but this can explode.",
         "timestamp": "5h ago",
         "reactions": {
-          "hug": 4,
+          "yes": 4,
           "omg": 2
         },
         "isOP": false
@@ -2484,7 +2528,7 @@
         "text": "Please make a plan before it gets bigger.",
         "timestamp": "12m ago",
         "reactions": {
-          "hug": 17,
+          "yes": 17,
           "omg": 10
         },
         "isOP": false
@@ -2495,7 +2539,7 @@
         "text": "Financial fear makes people lie fast.",
         "timestamp": "12m ago",
         "reactions": {
-          "hug": 14,
+          "yes": 14,
           "omg": 8
         },
         "isOP": false
@@ -2506,7 +2550,7 @@
         "text": "This is more common than people admit.",
         "timestamp": "2h ago",
         "reactions": {
-          "hug": 8,
+          "yes": 8,
           "omg": 9
         },
         "isOP": false
@@ -2517,7 +2561,7 @@
         "text": "Money secrets destroy trust quietly.",
         "timestamp": "1h ago",
         "reactions": {
-          "hug": 16,
+          "yes": 16,
           "omg": 12
         },
         "isOP": false
@@ -2531,9 +2575,10 @@
     "topic": "family",
     "timestamp": "2 hours ago",
     "reactions": {
-      "hug": 74,
-      "omg": 154,
-      "meh": 23
+      "yawn": 6,
+      "nah": 5,
+      "yes": 74,
+      "omg": 154
     },
     "replyCount": 5,
     "replies": [
@@ -2543,7 +2588,7 @@
         "text": "You're not evil for feeling complicated things.",
         "timestamp": "5h ago",
         "reactions": {
-          "hug": 3,
+          "yes": 3,
           "omg": 14
         },
         "isOP": false
@@ -2554,7 +2599,7 @@
         "text": "I hope you find one honest conversation soon.",
         "timestamp": "1h ago",
         "reactions": {
-          "hug": 14,
+          "yes": 14,
           "omg": 5
         },
         "isOP": false
@@ -2565,7 +2610,7 @@
         "text": "We all perform normal for our parents.",
         "timestamp": "2h ago",
         "reactions": {
-          "hug": 8,
+          "yes": 8,
           "omg": 4
         },
         "isOP": false
@@ -2576,7 +2621,7 @@
         "text": "This one hurt to read.",
         "timestamp": "12m ago",
         "reactions": {
-          "hug": 15,
+          "yes": 15,
           "omg": 10
         },
         "isOP": false
@@ -2587,7 +2632,7 @@
         "text": "Family roles trap people for decades.",
         "timestamp": "5h ago",
         "reactions": {
-          "hug": 16,
+          "yes": 16,
           "omg": 11
         },
         "isOP": false
@@ -2601,9 +2646,10 @@
     "topic": "school",
     "timestamp": "2 days ago",
     "reactions": {
-      "hug": 80,
-      "omg": 49,
-      "meh": 13
+      "yawn": 0,
+      "nah": 24,
+      "yes": 80,
+      "omg": 49
     },
     "replyCount": 4,
     "replies": [
@@ -2613,7 +2659,7 @@
         "text": "You should probably never tweet this from your real account.",
         "timestamp": "5h ago",
         "reactions": {
-          "hug": 8,
+          "yes": 8,
           "omg": 3
         },
         "isOP": false
@@ -2624,7 +2670,7 @@
         "text": "Student survival mode is wild.",
         "timestamp": "5h ago",
         "reactions": {
-          "hug": 21,
+          "yes": 21,
           "omg": 0
         },
         "isOP": false
@@ -2635,7 +2681,7 @@
         "text": "I can't decide if this is genius or terrifying.",
         "timestamp": "1h ago",
         "reactions": {
-          "hug": 16,
+          "yes": 16,
           "omg": 1
         },
         "isOP": false
@@ -2646,7 +2692,7 @@
         "text": "Academic pressure turns people feral.",
         "timestamp": "1h ago",
         "reactions": {
-          "hug": 9,
+          "yes": 9,
           "omg": 7
         },
         "isOP": false
@@ -2660,9 +2706,10 @@
     "topic": "health",
     "timestamp": "16 hours ago",
     "reactions": {
-      "hug": 200,
-      "omg": 33,
-      "meh": 17
+      "yawn": 9,
+      "nah": 5,
+      "yes": 200,
+      "omg": 33
     },
     "replyCount": 5,
     "replies": [
@@ -2672,7 +2719,7 @@
         "text": "This sounds like burnout wearing a mask.",
         "timestamp": "9h ago",
         "reactions": {
-          "hug": 16,
+          "yes": 16,
           "omg": 0
         },
         "isOP": false
@@ -2683,7 +2730,7 @@
         "text": "Please be gentler with yourself.",
         "timestamp": "2h ago",
         "reactions": {
-          "hug": 19,
+          "yes": 19,
           "omg": 6
         },
         "isOP": false
@@ -2694,7 +2741,7 @@
         "text": "You deserve support, not just coping tricks.",
         "timestamp": "2h ago",
         "reactions": {
-          "hug": 8,
+          "yes": 8,
           "omg": 12
         },
         "isOP": false
@@ -2705,7 +2752,7 @@
         "text": "Thank you for saying the quiet part out loud.",
         "timestamp": "12m ago",
         "reactions": {
-          "hug": 13,
+          "yes": 13,
           "omg": 4
         },
         "isOP": false
@@ -2716,7 +2763,7 @@
         "text": "Your body is waving red flags.",
         "timestamp": "5h ago",
         "reactions": {
-          "hug": 10,
+          "yes": 10,
           "omg": 9
         },
         "isOP": false
@@ -2730,9 +2777,10 @@
     "topic": "relationships",
     "timestamp": "1 hour ago",
     "reactions": {
-      "hug": 149,
-      "omg": 52,
-      "meh": 18
+      "yawn": 14,
+      "nah": 24,
+      "yes": 149,
+      "omg": 52
     },
     "replyCount": 6,
     "replies": [
@@ -2742,7 +2790,7 @@
         "text": "Please don't normalize suffering as loyalty.",
         "timestamp": "1h ago",
         "reactions": {
-          "hug": 1,
+          "yes": 1,
           "omg": 6
         },
         "isOP": false
@@ -2753,7 +2801,7 @@
         "text": "This is messy and painfully human.",
         "timestamp": "2h ago",
         "reactions": {
-          "hug": 18,
+          "yes": 18,
           "omg": 5
         },
         "isOP": false
@@ -2764,7 +2812,7 @@
         "text": "I stayed for appearances too and it wrecked me.",
         "timestamp": "12m ago",
         "reactions": {
-          "hug": 6,
+          "yes": 6,
           "omg": 10
         },
         "isOP": false
@@ -2775,7 +2823,7 @@
         "text": "If guilt is this loud, you already know what you need to do.",
         "timestamp": "28m ago",
         "reactions": {
-          "hug": 16,
+          "yes": 16,
           "omg": 2
         },
         "isOP": false
@@ -2786,7 +2834,7 @@
         "text": "Honesty now hurts less than truth later.",
         "timestamp": "28m ago",
         "reactions": {
-          "hug": 5,
+          "yes": 5,
           "omg": 4
         },
         "isOP": false
@@ -2796,7 +2844,7 @@
         "user": "QuietIris",
         "timestamp": "28m ago",
         "reactions": {
-          "hug": 12,
+          "yes": 12,
           "omg": 11
         },
         "isOP": false
@@ -2810,9 +2858,10 @@
     "topic": "social",
     "timestamp": "3 hours ago",
     "reactions": {
-      "hug": 70,
-      "omg": 175,
-      "meh": 2
+      "yawn": 14,
+      "nah": 12,
+      "yes": 70,
+      "omg": 175
     },
     "replyCount": 5,
     "replies": [
@@ -2822,7 +2871,7 @@
         "text": "Internet persona vs real life is too real.",
         "timestamp": "2h ago",
         "reactions": {
-          "hug": 8,
+          "yes": 8,
           "omg": 13
         },
         "isOP": false
@@ -2833,7 +2882,7 @@
         "text": "Social media rewards masks, not honesty.",
         "timestamp": "28m ago",
         "reactions": {
-          "hug": 13,
+          "yes": 13,
           "omg": 5
         },
         "isOP": false
@@ -2844,7 +2893,7 @@
         "text": "You're not alone in this split.",
         "timestamp": "12m ago",
         "reactions": {
-          "hug": 2,
+          "yes": 2,
           "omg": 5
         },
         "isOP": false
@@ -2855,7 +2904,7 @@
         "text": "This made me put my phone down for a minute.",
         "timestamp": "12m ago",
         "reactions": {
-          "hug": 16,
+          "yes": 16,
           "omg": 1
         },
         "isOP": false
@@ -2866,7 +2915,7 @@
         "text": "I do this too and hate it.",
         "timestamp": "12m ago",
         "reactions": {
-          "hug": 4,
+          "yes": 4,
           "omg": 9
         },
         "isOP": false
@@ -2880,9 +2929,10 @@
     "topic": "work",
     "timestamp": "32 minutes ago",
     "reactions": {
-      "hug": 129,
-      "omg": 36,
-      "meh": 5
+      "yawn": 15,
+      "nah": 19,
+      "yes": 129,
+      "omg": 36
     },
     "replyCount": 5,
     "replies": [
@@ -2892,7 +2942,7 @@
         "text": "Document everything and protect yourself.",
         "timestamp": "2h ago",
         "reactions": {
-          "hug": 6,
+          "yes": 6,
           "omg": 4
         },
         "isOP": false
@@ -2903,7 +2953,7 @@
         "text": "This belongs in a workplace confessions book.",
         "timestamp": "28m ago",
         "reactions": {
-          "hug": 14,
+          "yes": 14,
           "omg": 8
         },
         "isOP": false
@@ -2914,7 +2964,7 @@
         "text": "I laughed because this is every office ever.",
         "timestamp": "12m ago",
         "reactions": {
-          "hug": 16,
+          "yes": 16,
           "omg": 7
         },
         "isOP": false
@@ -2925,7 +2975,7 @@
         "text": "Corporate theater is exhausting.",
         "timestamp": "12m ago",
         "reactions": {
-          "hug": 8,
+          "yes": 8,
           "omg": 13
         },
         "isOP": false
@@ -2936,7 +2986,7 @@
         "text": "You're surviving a broken system, not failing.",
         "timestamp": "1h ago",
         "reactions": {
-          "hug": 7,
+          "yes": 7,
           "omg": 5
         },
         "isOP": false
@@ -2950,9 +3000,10 @@
     "topic": "crime",
     "timestamp": "7 hours ago",
     "reactions": {
-      "hug": 189,
-      "omg": 31,
-      "meh": 10
+      "yawn": 0,
+      "nah": 9,
+      "yes": 189,
+      "omg": 31
     },
     "replyCount": 6,
     "replies": [
@@ -2962,7 +3013,7 @@
         "text": "I laughed and then felt bad.",
         "timestamp": "12m ago",
         "reactions": {
-          "hug": 11,
+          "yes": 11,
           "omg": 9
         },
         "isOP": false
@@ -2973,7 +3024,7 @@
         "text": "This could go very wrong if traced.",
         "timestamp": "12m ago",
         "reactions": {
-          "hug": 8,
+          "yes": 8,
           "omg": 9
         },
         "isOP": false
@@ -2984,7 +3035,7 @@
         "text": "Delete this and call nobody 😂",
         "timestamp": "1h ago",
         "reactions": {
-          "hug": 5,
+          "yes": 5,
           "omg": 9
         },
         "isOP": false
@@ -2995,7 +3046,7 @@
         "text": "Petty revenge is still revenge.",
         "timestamp": "28m ago",
         "reactions": {
-          "hug": 20,
+          "yes": 20,
           "omg": 10
         },
         "isOP": false
@@ -3006,7 +3057,7 @@
         "text": "Moral gray zone speedrun.",
         "timestamp": "2h ago",
         "reactions": {
-          "hug": 14,
+          "yes": 14,
           "omg": 5
         },
         "isOP": false
@@ -3016,7 +3067,7 @@
         "user": "PaperTiger",
         "timestamp": "9h ago",
         "reactions": {
-          "hug": 21,
+          "yes": 21,
           "omg": 2
         },
         "isOP": false
@@ -3030,9 +3081,10 @@
     "topic": "money",
     "timestamp": "2 days ago",
     "reactions": {
-      "hug": 52,
-      "omg": 82,
-      "meh": 12
+      "yawn": 2,
+      "nah": 11,
+      "yes": 52,
+      "omg": 82
     },
     "replyCount": 6,
     "replies": [
@@ -3042,7 +3094,7 @@
         "text": "Financial fear makes people lie fast.",
         "timestamp": "2h ago",
         "reactions": {
-          "hug": 20,
+          "yes": 20,
           "omg": 10
         },
         "isOP": false
@@ -3053,7 +3105,7 @@
         "text": "I get why you did it, but this can explode.",
         "timestamp": "2h ago",
         "reactions": {
-          "hug": 12,
+          "yes": 12,
           "omg": 8
         },
         "isOP": false
@@ -3064,7 +3116,7 @@
         "text": "This is more common than people admit.",
         "timestamp": "5h ago",
         "reactions": {
-          "hug": 2,
+          "yes": 2,
           "omg": 7
         },
         "isOP": false
@@ -3075,7 +3127,7 @@
         "text": "Money secrets destroy trust quietly.",
         "timestamp": "12m ago",
         "reactions": {
-          "hug": 7,
+          "yes": 7,
           "omg": 6
         },
         "isOP": false
@@ -3086,7 +3138,7 @@
         "text": "Please make a plan before it gets bigger.",
         "timestamp": "2h ago",
         "reactions": {
-          "hug": 10,
+          "yes": 10,
           "omg": 5
         },
         "isOP": false
@@ -3096,7 +3148,7 @@
         "user": "NightOwl",
         "timestamp": "2h ago",
         "reactions": {
-          "hug": 3,
+          "yes": 3,
           "omg": 1
         },
         "isOP": false
@@ -3110,9 +3162,10 @@
     "topic": "family",
     "timestamp": "32 minutes ago",
     "reactions": {
-      "hug": 154,
-      "omg": 31,
-      "meh": 9
+      "yawn": 13,
+      "nah": 11,
+      "yes": 154,
+      "omg": 31
     },
     "replyCount": 5,
     "replies": [
@@ -3122,7 +3175,7 @@
         "text": "You're not evil for feeling complicated things.",
         "timestamp": "12m ago",
         "reactions": {
-          "hug": 8,
+          "yes": 8,
           "omg": 12
         },
         "isOP": false
@@ -3133,7 +3186,7 @@
         "text": "We all perform normal for our parents.",
         "timestamp": "2h ago",
         "reactions": {
-          "hug": 17,
+          "yes": 17,
           "omg": 9
         },
         "isOP": false
@@ -3144,7 +3197,7 @@
         "text": "I hope you find one honest conversation soon.",
         "timestamp": "1h ago",
         "reactions": {
-          "hug": 12,
+          "yes": 12,
           "omg": 11
         },
         "isOP": false
@@ -3155,7 +3208,7 @@
         "text": "Family roles trap people for decades.",
         "timestamp": "9h ago",
         "reactions": {
-          "hug": 5,
+          "yes": 5,
           "omg": 11
         },
         "isOP": false
@@ -3166,7 +3219,7 @@
         "text": "This one hurt to read.",
         "timestamp": "5h ago",
         "reactions": {
-          "hug": 20,
+          "yes": 20,
           "omg": 1
         },
         "isOP": false
@@ -3180,9 +3233,10 @@
     "topic": "funny",
     "timestamp": "12 hours ago",
     "reactions": {
-      "hug": 114,
-      "omg": 162,
-      "meh": 5
+      "yawn": 1,
+      "nah": 8,
+      "yes": 114,
+      "omg": 162
     },
     "replyCount": 4,
     "replies": [
@@ -3192,7 +3246,7 @@
         "text": "You accidentally built a whole character arc.",
         "timestamp": "5h ago",
         "reactions": {
-          "hug": 5,
+          "yes": 5,
           "omg": 7
         },
         "isOP": false
@@ -3203,7 +3257,7 @@
         "text": "Please never stop being this weird.",
         "timestamp": "5h ago",
         "reactions": {
-          "hug": 8,
+          "yes": 8,
           "omg": 7
         },
         "isOP": false
@@ -3214,7 +3268,7 @@
         "text": "Funniest confession tonight.",
         "timestamp": "9h ago",
         "reactions": {
-          "hug": 21,
+          "yes": 21,
           "omg": 9
         },
         "isOP": false
@@ -3225,7 +3279,7 @@
         "text": "I am crying laughing.",
         "timestamp": "1h ago",
         "reactions": {
-          "hug": 12,
+          "yes": 12,
           "omg": 2
         },
         "isOP": false
@@ -3239,9 +3293,10 @@
     "topic": "school",
     "timestamp": "12 hours ago",
     "reactions": {
-      "hug": 92,
-      "omg": 146,
-      "meh": 3
+      "yawn": 12,
+      "nah": 5,
+      "yes": 92,
+      "omg": 146
     },
     "replyCount": 5,
     "replies": [
@@ -3251,7 +3306,7 @@
         "text": "Academic pressure turns people feral.",
         "timestamp": "9h ago",
         "reactions": {
-          "hug": 9,
+          "yes": 9,
           "omg": 12
         },
         "isOP": false
@@ -3262,7 +3317,7 @@
         "text": "The system rewards outcomes, not integrity.",
         "timestamp": "5h ago",
         "reactions": {
-          "hug": 9,
+          "yes": 9,
           "omg": 13
         },
         "isOP": false
@@ -3273,7 +3328,7 @@
         "text": "I can't decide if this is genius or terrifying.",
         "timestamp": "12m ago",
         "reactions": {
-          "hug": 22,
+          "yes": 22,
           "omg": 7
         },
         "isOP": false
@@ -3284,7 +3339,7 @@
         "text": "Student survival mode is wild.",
         "timestamp": "12m ago",
         "reactions": {
-          "hug": 9,
+          "yes": 9,
           "omg": 7
         },
         "isOP": false
@@ -3295,7 +3350,7 @@
         "text": "You should probably never tweet this from your real account.",
         "timestamp": "2h ago",
         "reactions": {
-          "hug": 16,
+          "yes": 16,
           "omg": 2
         },
         "isOP": false
@@ -3309,9 +3364,10 @@
     "topic": "health",
     "timestamp": "7 hours ago",
     "reactions": {
-      "hug": 166,
-      "omg": 71,
-      "meh": 20
+      "yawn": 3,
+      "nah": 5,
+      "yes": 166,
+      "omg": 71
     },
     "replyCount": 4,
     "replies": [
@@ -3321,7 +3377,7 @@
         "text": "Please be gentler with yourself.",
         "timestamp": "2h ago",
         "reactions": {
-          "hug": 1,
+          "yes": 1,
           "omg": 3
         },
         "isOP": false
@@ -3332,7 +3388,7 @@
         "text": "You deserve support, not just coping tricks.",
         "timestamp": "12m ago",
         "reactions": {
-          "hug": 17,
+          "yes": 17,
           "omg": 3
         },
         "isOP": false
@@ -3343,7 +3399,7 @@
         "text": "This sounds like burnout wearing a mask.",
         "timestamp": "28m ago",
         "reactions": {
-          "hug": 12,
+          "yes": 12,
           "omg": 14
         },
         "isOP": false
@@ -3354,7 +3410,7 @@
         "text": "Your body is waving red flags.",
         "timestamp": "9h ago",
         "reactions": {
-          "hug": 9,
+          "yes": 9,
           "omg": 8
         },
         "isOP": false
@@ -3368,9 +3424,10 @@
     "topic": "relationships",
     "timestamp": "20 hours ago",
     "reactions": {
-      "hug": 194,
-      "omg": 96,
-      "meh": 12
+      "yawn": 9,
+      "nah": 28,
+      "yes": 194,
+      "omg": 96
     },
     "replyCount": 6,
     "replies": [
@@ -3380,7 +3437,7 @@
         "text": "This is messy and painfully human.",
         "timestamp": "5h ago",
         "reactions": {
-          "hug": 16,
+          "yes": 16,
           "omg": 13
         },
         "isOP": false
@@ -3391,7 +3448,7 @@
         "text": "Please don't normalize suffering as loyalty.",
         "timestamp": "5h ago",
         "reactions": {
-          "hug": 8,
+          "yes": 8,
           "omg": 2
         },
         "isOP": false
@@ -3402,7 +3459,7 @@
         "text": "I stayed for appearances too and it wrecked me.",
         "timestamp": "12m ago",
         "reactions": {
-          "hug": 8,
+          "yes": 8,
           "omg": 11
         },
         "isOP": false
@@ -3413,7 +3470,7 @@
         "text": "If guilt is this loud, you already know what you need to do.",
         "timestamp": "12m ago",
         "reactions": {
-          "hug": 1,
+          "yes": 1,
           "omg": 4
         },
         "isOP": false
@@ -3424,7 +3481,7 @@
         "text": "Honesty now hurts less than truth later.",
         "timestamp": "2h ago",
         "reactions": {
-          "hug": 2,
+          "yes": 2,
           "omg": 10
         },
         "isOP": false
@@ -3434,7 +3491,7 @@
         "user": "DeadpanDawn",
         "timestamp": "28m ago",
         "reactions": {
-          "hug": 22,
+          "yes": 22,
           "omg": 13
         },
         "isOP": false
@@ -3448,9 +3505,10 @@
     "topic": "work",
     "timestamp": "2 hours ago",
     "reactions": {
-      "hug": 211,
-      "omg": 94,
-      "meh": 9
+      "yawn": 5,
+      "nah": 21,
+      "yes": 211,
+      "omg": 94
     },
     "replyCount": 5,
     "replies": [
@@ -3460,7 +3518,7 @@
         "text": "Corporate theater is exhausting.",
         "timestamp": "5h ago",
         "reactions": {
-          "hug": 7,
+          "yes": 7,
           "omg": 10
         },
         "isOP": false
@@ -3471,7 +3529,7 @@
         "text": "Document everything and protect yourself.",
         "timestamp": "9h ago",
         "reactions": {
-          "hug": 16,
+          "yes": 16,
           "omg": 12
         },
         "isOP": false
@@ -3482,7 +3540,7 @@
         "text": "I laughed because this is every office ever.",
         "timestamp": "2h ago",
         "reactions": {
-          "hug": 10,
+          "yes": 10,
           "omg": 2
         },
         "isOP": false
@@ -3493,7 +3551,7 @@
         "text": "You're surviving a broken system, not failing.",
         "timestamp": "28m ago",
         "reactions": {
-          "hug": 11,
+          "yes": 11,
           "omg": 6
         },
         "isOP": false
@@ -3504,7 +3562,7 @@
         "text": "This belongs in a workplace confessions book.",
         "timestamp": "2h ago",
         "reactions": {
-          "hug": 3,
+          "yes": 3,
           "omg": 10
         },
         "isOP": false
@@ -3518,9 +3576,10 @@
     "topic": "crime",
     "timestamp": "15 minutes ago",
     "reactions": {
-      "hug": 167,
-      "omg": 113,
-      "meh": 18
+      "yawn": 2,
+      "nah": 27,
+      "yes": 167,
+      "omg": 113
     },
     "replyCount": 6,
     "replies": [
@@ -3530,7 +3589,7 @@
         "text": "Moral gray zone speedrun.",
         "timestamp": "9h ago",
         "reactions": {
-          "hug": 7,
+          "yes": 7,
           "omg": 5
         },
         "isOP": false
@@ -3541,7 +3600,7 @@
         "text": "This could go very wrong if traced.",
         "timestamp": "9h ago",
         "reactions": {
-          "hug": 2,
+          "yes": 2,
           "omg": 8
         },
         "isOP": false
@@ -3552,7 +3611,7 @@
         "text": "Petty revenge is still revenge.",
         "timestamp": "28m ago",
         "reactions": {
-          "hug": 10,
+          "yes": 10,
           "omg": 13
         },
         "isOP": false
@@ -3563,7 +3622,7 @@
         "text": "Delete this and call nobody 😂",
         "timestamp": "1h ago",
         "reactions": {
-          "hug": 20,
+          "yes": 20,
           "omg": 3
         },
         "isOP": false
@@ -3574,7 +3633,7 @@
         "text": "I laughed and then felt bad.",
         "timestamp": "2h ago",
         "reactions": {
-          "hug": 18,
+          "yes": 18,
           "omg": 6
         },
         "isOP": false
@@ -3584,7 +3643,7 @@
         "user": "CipherLemon",
         "timestamp": "28m ago",
         "reactions": {
-          "hug": 20,
+          "yes": 20,
           "omg": 13
         },
         "isOP": false
@@ -3598,9 +3657,10 @@
     "topic": "money",
     "timestamp": "32 minutes ago",
     "reactions": {
-      "hug": 138,
-      "omg": 154,
-      "meh": 3
+      "yawn": 13,
+      "nah": 30,
+      "yes": 138,
+      "omg": 154
     },
     "replyCount": 4,
     "replies": [
@@ -3610,7 +3670,7 @@
         "text": "Money secrets destroy trust quietly.",
         "timestamp": "12m ago",
         "reactions": {
-          "hug": 21,
+          "yes": 21,
           "omg": 4
         },
         "isOP": false
@@ -3621,7 +3681,7 @@
         "text": "I get why you did it, but this can explode.",
         "timestamp": "1h ago",
         "reactions": {
-          "hug": 11,
+          "yes": 11,
           "omg": 2
         },
         "isOP": false
@@ -3632,7 +3692,7 @@
         "text": "This is more common than people admit.",
         "timestamp": "28m ago",
         "reactions": {
-          "hug": 14,
+          "yes": 14,
           "omg": 2
         },
         "isOP": false
@@ -3643,7 +3703,7 @@
         "text": "Financial fear makes people lie fast.",
         "timestamp": "5h ago",
         "reactions": {
-          "hug": 1,
+          "yes": 1,
           "omg": 11
         },
         "isOP": false
@@ -3657,9 +3717,10 @@
     "topic": "social",
     "timestamp": "16 hours ago",
     "reactions": {
-      "hug": 183,
-      "omg": 137,
-      "meh": 21
+      "yawn": 11,
+      "nah": 18,
+      "yes": 183,
+      "omg": 137
     },
     "replyCount": 4,
     "replies": [
@@ -3669,7 +3730,7 @@
         "text": "I do this too and hate it.",
         "timestamp": "2h ago",
         "reactions": {
-          "hug": 10,
+          "yes": 10,
           "omg": 10
         },
         "isOP": false
@@ -3680,7 +3741,7 @@
         "text": "You're not alone in this split.",
         "timestamp": "28m ago",
         "reactions": {
-          "hug": 20,
+          "yes": 20,
           "omg": 10
         },
         "isOP": false
@@ -3691,7 +3752,7 @@
         "text": "Social media rewards masks, not honesty.",
         "timestamp": "1h ago",
         "reactions": {
-          "hug": 17,
+          "yes": 17,
           "omg": 9
         },
         "isOP": false
@@ -3702,7 +3763,7 @@
         "text": "Internet persona vs real life is too real.",
         "timestamp": "2h ago",
         "reactions": {
-          "hug": 4,
+          "yes": 4,
           "omg": 3
         },
         "isOP": false
@@ -3716,9 +3777,10 @@
     "topic": "family",
     "timestamp": "3 days ago",
     "reactions": {
-      "hug": 148,
-      "omg": 175,
-      "meh": 11
+      "yawn": 4,
+      "nah": 22,
+      "yes": 148,
+      "omg": 175
     },
     "replyCount": 5,
     "replies": [
@@ -3728,7 +3790,7 @@
         "text": "You're not evil for feeling complicated things.",
         "timestamp": "2h ago",
         "reactions": {
-          "hug": 19,
+          "yes": 19,
           "omg": 8
         },
         "isOP": false
@@ -3739,7 +3801,7 @@
         "text": "Family roles trap people for decades.",
         "timestamp": "5h ago",
         "reactions": {
-          "hug": 12,
+          "yes": 12,
           "omg": 14
         },
         "isOP": false
@@ -3750,7 +3812,7 @@
         "text": "This one hurt to read.",
         "timestamp": "12m ago",
         "reactions": {
-          "hug": 17,
+          "yes": 17,
           "omg": 10
         },
         "isOP": false
@@ -3761,7 +3823,7 @@
         "text": "I hope you find one honest conversation soon.",
         "timestamp": "1h ago",
         "reactions": {
-          "hug": 7,
+          "yes": 7,
           "omg": 11
         },
         "isOP": false
@@ -3772,7 +3834,7 @@
         "text": "We all perform normal for our parents.",
         "timestamp": "12m ago",
         "reactions": {
-          "hug": 16,
+          "yes": 16,
           "omg": 13
         },
         "isOP": false
@@ -3786,9 +3848,10 @@
     "topic": "work",
     "timestamp": "3 days ago",
     "reactions": {
-      "hug": 70,
-      "omg": 63,
-      "meh": 22
+      "yawn": 8,
+      "nah": 28,
+      "yes": 70,
+      "omg": 63
     },
     "replyCount": 6,
     "replies": [
@@ -3798,7 +3861,7 @@
         "text": "You're surviving a broken system, not failing.",
         "timestamp": "12m ago",
         "reactions": {
-          "hug": 21,
+          "yes": 21,
           "omg": 9
         },
         "isOP": false
@@ -3809,7 +3872,7 @@
         "text": "This belongs in a workplace confessions book.",
         "timestamp": "5h ago",
         "reactions": {
-          "hug": 12,
+          "yes": 12,
           "omg": 0
         },
         "isOP": false
@@ -3820,7 +3883,7 @@
         "text": "I laughed because this is every office ever.",
         "timestamp": "12m ago",
         "reactions": {
-          "hug": 15,
+          "yes": 15,
           "omg": 6
         },
         "isOP": false
@@ -3831,7 +3894,7 @@
         "text": "Corporate theater is exhausting.",
         "timestamp": "28m ago",
         "reactions": {
-          "hug": 15,
+          "yes": 15,
           "omg": 13
         },
         "isOP": false
@@ -3842,7 +3905,7 @@
         "text": "Document everything and protect yourself.",
         "timestamp": "2h ago",
         "reactions": {
-          "hug": 17,
+          "yes": 17,
           "omg": 0
         },
         "isOP": false
@@ -3852,7 +3915,7 @@
         "user": "PixelMoth",
         "timestamp": "12m ago",
         "reactions": {
-          "hug": 1,
+          "yes": 1,
           "omg": 11
         },
         "isOP": false
@@ -3866,9 +3929,10 @@
     "topic": "school",
     "timestamp": "12 hours ago",
     "reactions": {
-      "hug": 93,
-      "omg": 177,
-      "meh": 9
+      "yawn": 6,
+      "nah": 13,
+      "yes": 93,
+      "omg": 177
     },
     "replyCount": 6,
     "replies": [
@@ -3878,7 +3942,7 @@
         "text": "I can't decide if this is genius or terrifying.",
         "timestamp": "28m ago",
         "reactions": {
-          "hug": 10,
+          "yes": 10,
           "omg": 13
         },
         "isOP": false
@@ -3889,7 +3953,7 @@
         "text": "The system rewards outcomes, not integrity.",
         "timestamp": "28m ago",
         "reactions": {
-          "hug": 11,
+          "yes": 11,
           "omg": 9
         },
         "isOP": false
@@ -3900,7 +3964,7 @@
         "text": "Academic pressure turns people feral.",
         "timestamp": "2h ago",
         "reactions": {
-          "hug": 9,
+          "yes": 9,
           "omg": 10
         },
         "isOP": false
@@ -3911,7 +3975,7 @@
         "text": "Student survival mode is wild.",
         "timestamp": "12m ago",
         "reactions": {
-          "hug": 14,
+          "yes": 14,
           "omg": 7
         },
         "isOP": false
@@ -3922,7 +3986,7 @@
         "text": "You should probably never tweet this from your real account.",
         "timestamp": "2h ago",
         "reactions": {
-          "hug": 8,
+          "yes": 8,
           "omg": 0
         },
         "isOP": false
@@ -3932,7 +3996,7 @@
         "user": "WiredTulip",
         "timestamp": "28m ago",
         "reactions": {
-          "hug": 15,
+          "yes": 15,
           "omg": 6
         },
         "isOP": false
@@ -3946,9 +4010,10 @@
     "topic": "health",
     "timestamp": "1 hour ago",
     "reactions": {
-      "hug": 147,
-      "omg": 66,
-      "meh": 11
+      "yawn": 6,
+      "nah": 24,
+      "yes": 147,
+      "omg": 66
     },
     "replyCount": 4,
     "replies": [
@@ -3958,7 +4023,7 @@
         "text": "Your body is waving red flags.",
         "timestamp": "28m ago",
         "reactions": {
-          "hug": 14,
+          "yes": 14,
           "omg": 7
         },
         "isOP": false
@@ -3969,7 +4034,7 @@
         "text": "This sounds like burnout wearing a mask.",
         "timestamp": "2h ago",
         "reactions": {
-          "hug": 2,
+          "yes": 2,
           "omg": 2
         },
         "isOP": false
@@ -3980,7 +4045,7 @@
         "text": "Please be gentler with yourself.",
         "timestamp": "5h ago",
         "reactions": {
-          "hug": 10,
+          "yes": 10,
           "omg": 14
         },
         "isOP": false
@@ -3991,7 +4056,7 @@
         "text": "Thank you for saying the quiet part out loud.",
         "timestamp": "9h ago",
         "reactions": {
-          "hug": 14,
+          "yes": 14,
           "omg": 5
         },
         "isOP": false
@@ -4005,9 +4070,10 @@
     "topic": "relationships",
     "timestamp": "16 hours ago",
     "reactions": {
-      "hug": 56,
-      "omg": 163,
-      "meh": 22
+      "yawn": 11,
+      "nah": 17,
+      "yes": 56,
+      "omg": 163
     },
     "replyCount": 6,
     "replies": [
@@ -4017,7 +4083,7 @@
         "text": "This is messy and painfully human.",
         "timestamp": "5h ago",
         "reactions": {
-          "hug": 14,
+          "yes": 14,
           "omg": 6
         },
         "isOP": false
@@ -4028,7 +4094,7 @@
         "text": "Honesty now hurts less than truth later.",
         "timestamp": "9h ago",
         "reactions": {
-          "hug": 17,
+          "yes": 17,
           "omg": 9
         },
         "isOP": false
@@ -4039,7 +4105,7 @@
         "text": "Please don't normalize suffering as loyalty.",
         "timestamp": "12m ago",
         "reactions": {
-          "hug": 20,
+          "yes": 20,
           "omg": 6
         },
         "isOP": false
@@ -4050,7 +4116,7 @@
         "text": "If guilt is this loud, you already know what you need to do.",
         "timestamp": "5h ago",
         "reactions": {
-          "hug": 17,
+          "yes": 17,
           "omg": 0
         },
         "isOP": false
@@ -4061,7 +4127,7 @@
         "text": "I stayed for appearances too and it wrecked me.",
         "timestamp": "28m ago",
         "reactions": {
-          "hug": 21,
+          "yes": 21,
           "omg": 2
         },
         "isOP": false
@@ -4071,7 +4137,7 @@
         "user": "QuietIris",
         "timestamp": "1h ago",
         "reactions": {
-          "hug": 10,
+          "yes": 10,
           "omg": 9
         },
         "isOP": false
@@ -4085,9 +4151,10 @@
     "topic": "funny",
     "timestamp": "15 minutes ago",
     "reactions": {
-      "hug": 209,
-      "omg": 135,
-      "meh": 9
+      "yawn": 11,
+      "nah": 28,
+      "yes": 209,
+      "omg": 135
     },
     "replyCount": 6,
     "replies": [
@@ -4097,7 +4164,7 @@
         "text": "You accidentally built a whole character arc.",
         "timestamp": "2h ago",
         "reactions": {
-          "hug": 17,
+          "yes": 17,
           "omg": 2
         },
         "isOP": false
@@ -4108,7 +4175,7 @@
         "text": "Funniest confession tonight.",
         "timestamp": "9h ago",
         "reactions": {
-          "hug": 7,
+          "yes": 7,
           "omg": 5
         },
         "isOP": false
@@ -4119,7 +4186,7 @@
         "text": "Please never stop being this weird.",
         "timestamp": "28m ago",
         "reactions": {
-          "hug": 18,
+          "yes": 18,
           "omg": 14
         },
         "isOP": false
@@ -4130,7 +4197,7 @@
         "text": "This is chaotic but harmless and I love it.",
         "timestamp": "9h ago",
         "reactions": {
-          "hug": 15,
+          "yes": 15,
           "omg": 2
         },
         "isOP": false
@@ -4141,7 +4208,7 @@
         "text": "I am crying laughing.",
         "timestamp": "12m ago",
         "reactions": {
-          "hug": 1,
+          "yes": 1,
           "omg": 13
         },
         "isOP": false
@@ -4151,7 +4218,7 @@
         "user": "MutedComet",
         "timestamp": "5h ago",
         "reactions": {
-          "hug": 22,
+          "yes": 22,
           "omg": 13
         },
         "isOP": false
@@ -4165,9 +4232,10 @@
     "topic": "crime",
     "timestamp": "15 minutes ago",
     "reactions": {
-      "hug": 33,
-      "omg": 160,
-      "meh": 7
+      "yawn": 15,
+      "nah": 27,
+      "yes": 33,
+      "omg": 160
     },
     "replyCount": 4,
     "replies": [
@@ -4177,7 +4245,7 @@
         "text": "This could go very wrong if traced.",
         "timestamp": "28m ago",
         "reactions": {
-          "hug": 11,
+          "yes": 11,
           "omg": 12
         },
         "isOP": false
@@ -4188,7 +4256,7 @@
         "text": "I laughed and then felt bad.",
         "timestamp": "1h ago",
         "reactions": {
-          "hug": 22,
+          "yes": 22,
           "omg": 9
         },
         "isOP": false
@@ -4199,7 +4267,7 @@
         "text": "Delete this and call nobody 😂",
         "timestamp": "2h ago",
         "reactions": {
-          "hug": 7,
+          "yes": 7,
           "omg": 11
         },
         "isOP": false
@@ -4210,7 +4278,7 @@
         "text": "Petty revenge is still revenge.",
         "timestamp": "9h ago",
         "reactions": {
-          "hug": 1,
+          "yes": 1,
           "omg": 3
         },
         "isOP": false
@@ -4224,9 +4292,10 @@
     "topic": "money",
     "timestamp": "15 minutes ago",
     "reactions": {
-      "hug": 113,
-      "omg": 123,
-      "meh": 17
+      "yawn": 1,
+      "nah": 18,
+      "yes": 113,
+      "omg": 123
     },
     "replyCount": 5,
     "replies": [
@@ -4236,7 +4305,7 @@
         "text": "This is more common than people admit.",
         "timestamp": "1h ago",
         "reactions": {
-          "hug": 17,
+          "yes": 17,
           "omg": 2
         },
         "isOP": false
@@ -4247,7 +4316,7 @@
         "text": "Financial fear makes people lie fast.",
         "timestamp": "9h ago",
         "reactions": {
-          "hug": 3,
+          "yes": 3,
           "omg": 11
         },
         "isOP": false
@@ -4258,7 +4327,7 @@
         "text": "I get why you did it, but this can explode.",
         "timestamp": "28m ago",
         "reactions": {
-          "hug": 21,
+          "yes": 21,
           "omg": 14
         },
         "isOP": false
@@ -4269,7 +4338,7 @@
         "text": "Please make a plan before it gets bigger.",
         "timestamp": "1h ago",
         "reactions": {
-          "hug": 4,
+          "yes": 4,
           "omg": 2
         },
         "isOP": false
@@ -4280,7 +4349,7 @@
         "text": "Money secrets destroy trust quietly.",
         "timestamp": "12m ago",
         "reactions": {
-          "hug": 7,
+          "yes": 7,
           "omg": 14
         },
         "isOP": false
@@ -4294,9 +4363,10 @@
     "topic": "social",
     "timestamp": "16 hours ago",
     "reactions": {
-      "hug": 189,
-      "omg": 67,
-      "meh": 13
+      "yawn": 10,
+      "nah": 27,
+      "yes": 189,
+      "omg": 67
     },
     "replyCount": 4,
     "replies": [
@@ -4306,7 +4376,7 @@
         "text": "You're not alone in this split.",
         "timestamp": "5h ago",
         "reactions": {
-          "hug": 6,
+          "yes": 6,
           "omg": 6
         },
         "isOP": false
@@ -4317,7 +4387,7 @@
         "text": "Internet persona vs real life is too real.",
         "timestamp": "5h ago",
         "reactions": {
-          "hug": 15,
+          "yes": 15,
           "omg": 14
         },
         "isOP": false
@@ -4328,7 +4398,7 @@
         "text": "I do this too and hate it.",
         "timestamp": "2h ago",
         "reactions": {
-          "hug": 10,
+          "yes": 10,
           "omg": 3
         },
         "isOP": false
@@ -4339,7 +4409,7 @@
         "text": "Social media rewards masks, not honesty.",
         "timestamp": "1h ago",
         "reactions": {
-          "hug": 14,
+          "yes": 14,
           "omg": 1
         },
         "isOP": false
@@ -4353,9 +4423,10 @@
     "topic": "family",
     "timestamp": "9 hours ago",
     "reactions": {
-      "hug": 125,
-      "omg": 158,
-      "meh": 4
+      "yawn": 5,
+      "nah": 19,
+      "yes": 125,
+      "omg": 158
     },
     "replyCount": 5,
     "replies": [
@@ -4365,7 +4436,7 @@
         "text": "Family roles trap people for decades.",
         "timestamp": "12m ago",
         "reactions": {
-          "hug": 21,
+          "yes": 21,
           "omg": 5
         },
         "isOP": false
@@ -4376,7 +4447,7 @@
         "text": "We all perform normal for our parents.",
         "timestamp": "12m ago",
         "reactions": {
-          "hug": 15,
+          "yes": 15,
           "omg": 12
         },
         "isOP": false
@@ -4387,7 +4458,7 @@
         "text": "You're not evil for feeling complicated things.",
         "timestamp": "5h ago",
         "reactions": {
-          "hug": 9,
+          "yes": 9,
           "omg": 5
         },
         "isOP": false
@@ -4398,7 +4469,7 @@
         "text": "This one hurt to read.",
         "timestamp": "2h ago",
         "reactions": {
-          "hug": 20,
+          "yes": 20,
           "omg": 12
         },
         "isOP": false
@@ -4409,7 +4480,7 @@
         "text": "I hope you find one honest conversation soon.",
         "timestamp": "9h ago",
         "reactions": {
-          "hug": 20,
+          "yes": 20,
           "omg": 14
         },
         "isOP": false
@@ -4423,9 +4494,10 @@
     "topic": "work",
     "timestamp": "9 hours ago",
     "reactions": {
-      "hug": 102,
-      "omg": 105,
-      "meh": 24
+      "yawn": 9,
+      "nah": 25,
+      "yes": 102,
+      "omg": 105
     },
     "replyCount": 4,
     "replies": [
@@ -4435,7 +4507,7 @@
         "text": "This belongs in a workplace confessions book.",
         "timestamp": "5h ago",
         "reactions": {
-          "hug": 6,
+          "yes": 6,
           "omg": 8
         },
         "isOP": false
@@ -4446,7 +4518,7 @@
         "text": "I laughed because this is every office ever.",
         "timestamp": "2h ago",
         "reactions": {
-          "hug": 14,
+          "yes": 14,
           "omg": 13
         },
         "isOP": false
@@ -4457,7 +4529,7 @@
         "text": "Document everything and protect yourself.",
         "timestamp": "2h ago",
         "reactions": {
-          "hug": 13,
+          "yes": 13,
           "omg": 7
         },
         "isOP": false
@@ -4468,7 +4540,7 @@
         "text": "Corporate theater is exhausting.",
         "timestamp": "5h ago",
         "reactions": {
-          "hug": 4,
+          "yes": 4,
           "omg": 7
         },
         "isOP": false
@@ -4482,9 +4554,10 @@
     "topic": "school",
     "timestamp": "7 hours ago",
     "reactions": {
-      "hug": 206,
-      "omg": 77,
-      "meh": 20
+      "yawn": 14,
+      "nah": 10,
+      "yes": 206,
+      "omg": 77
     },
     "replyCount": 4,
     "replies": [
@@ -4494,7 +4567,7 @@
         "text": "You should probably never tweet this from your real account.",
         "timestamp": "28m ago",
         "reactions": {
-          "hug": 12,
+          "yes": 12,
           "omg": 8
         },
         "isOP": false
@@ -4505,7 +4578,7 @@
         "text": "Academic pressure turns people feral.",
         "timestamp": "5h ago",
         "reactions": {
-          "hug": 2,
+          "yes": 2,
           "omg": 7
         },
         "isOP": false
@@ -4516,7 +4589,7 @@
         "text": "I can't decide if this is genius or terrifying.",
         "timestamp": "2h ago",
         "reactions": {
-          "hug": 4,
+          "yes": 4,
           "omg": 14
         },
         "isOP": false
@@ -4527,7 +4600,7 @@
         "text": "Student survival mode is wild.",
         "timestamp": "5h ago",
         "reactions": {
-          "hug": 4,
+          "yes": 4,
           "omg": 10
         },
         "isOP": false
@@ -4541,9 +4614,10 @@
     "topic": "health",
     "timestamp": "7 hours ago",
     "reactions": {
-      "hug": 70,
-      "omg": 125,
-      "meh": 6
+      "yawn": 13,
+      "nah": 27,
+      "yes": 70,
+      "omg": 125
     },
     "replyCount": 4,
     "replies": [
@@ -4553,7 +4627,7 @@
         "text": "Please be gentler with yourself.",
         "timestamp": "1h ago",
         "reactions": {
-          "hug": 17,
+          "yes": 17,
           "omg": 0
         },
         "isOP": false
@@ -4564,7 +4638,7 @@
         "text": "Thank you for saying the quiet part out loud.",
         "timestamp": "28m ago",
         "reactions": {
-          "hug": 16,
+          "yes": 16,
           "omg": 12
         },
         "isOP": false
@@ -4575,7 +4649,7 @@
         "text": "You deserve support, not just coping tricks.",
         "timestamp": "28m ago",
         "reactions": {
-          "hug": 4,
+          "yes": 4,
           "omg": 5
         },
         "isOP": false
@@ -4586,7 +4660,7 @@
         "text": "Your body is waving red flags.",
         "timestamp": "5h ago",
         "reactions": {
-          "hug": 22,
+          "yes": 22,
           "omg": 5
         },
         "isOP": false
@@ -4600,9 +4674,10 @@
     "topic": "relationships",
     "timestamp": "16 hours ago",
     "reactions": {
-      "hug": 50,
-      "omg": 97,
-      "meh": 17
+      "yawn": 5,
+      "nah": 13,
+      "yes": 50,
+      "omg": 97
     },
     "replyCount": 5,
     "replies": [
@@ -4612,7 +4687,7 @@
         "text": "This is messy and painfully human.",
         "timestamp": "1h ago",
         "reactions": {
-          "hug": 4,
+          "yes": 4,
           "omg": 9
         },
         "isOP": false
@@ -4623,7 +4698,7 @@
         "text": "Honesty now hurts less than truth later.",
         "timestamp": "5h ago",
         "reactions": {
-          "hug": 2,
+          "yes": 2,
           "omg": 10
         },
         "isOP": false
@@ -4634,7 +4709,7 @@
         "text": "Please don't normalize suffering as loyalty.",
         "timestamp": "1h ago",
         "reactions": {
-          "hug": 3,
+          "yes": 3,
           "omg": 13
         },
         "isOP": false
@@ -4645,7 +4720,7 @@
         "text": "If guilt is this loud, you already know what you need to do.",
         "timestamp": "28m ago",
         "reactions": {
-          "hug": 20,
+          "yes": 20,
           "omg": 5
         },
         "isOP": false
@@ -4656,7 +4731,7 @@
         "text": "I stayed for appearances too and it wrecked me.",
         "timestamp": "9h ago",
         "reactions": {
-          "hug": 19,
+          "yes": 19,
           "omg": 0
         },
         "isOP": false
@@ -4670,9 +4745,10 @@
     "topic": "crime",
     "timestamp": "9 hours ago",
     "reactions": {
-      "hug": 111,
-      "omg": 140,
-      "meh": 17
+      "yawn": 5,
+      "nah": 23,
+      "yes": 111,
+      "omg": 140
     },
     "replyCount": 5,
     "replies": [
@@ -4682,7 +4758,7 @@
         "text": "Moral gray zone speedrun.",
         "timestamp": "5h ago",
         "reactions": {
-          "hug": 13,
+          "yes": 13,
           "omg": 2
         },
         "isOP": false
@@ -4693,7 +4769,7 @@
         "text": "Petty revenge is still revenge.",
         "timestamp": "12m ago",
         "reactions": {
-          "hug": 20,
+          "yes": 20,
           "omg": 13
         },
         "isOP": false
@@ -4704,7 +4780,7 @@
         "text": "Delete this and call nobody 😂",
         "timestamp": "9h ago",
         "reactions": {
-          "hug": 21,
+          "yes": 21,
           "omg": 12
         },
         "isOP": false
@@ -4715,7 +4791,7 @@
         "text": "I laughed and then felt bad.",
         "timestamp": "28m ago",
         "reactions": {
-          "hug": 18,
+          "yes": 18,
           "omg": 4
         },
         "isOP": false
@@ -4726,7 +4802,7 @@
         "text": "This could go very wrong if traced.",
         "timestamp": "5h ago",
         "reactions": {
-          "hug": 18,
+          "yes": 18,
           "omg": 1
         },
         "isOP": false
@@ -4740,9 +4816,10 @@
     "topic": "money",
     "timestamp": "1 hour ago",
     "reactions": {
-      "hug": 155,
-      "omg": 100,
-      "meh": 8
+      "yawn": 13,
+      "nah": 19,
+      "yes": 155,
+      "omg": 100
     },
     "replyCount": 6,
     "replies": [
@@ -4752,7 +4829,7 @@
         "text": "Financial fear makes people lie fast.",
         "timestamp": "5h ago",
         "reactions": {
-          "hug": 22,
+          "yes": 22,
           "omg": 12
         },
         "isOP": false
@@ -4763,7 +4840,7 @@
         "text": "Please make a plan before it gets bigger.",
         "timestamp": "5h ago",
         "reactions": {
-          "hug": 19,
+          "yes": 19,
           "omg": 13
         },
         "isOP": false
@@ -4774,7 +4851,7 @@
         "text": "I get why you did it, but this can explode.",
         "timestamp": "2h ago",
         "reactions": {
-          "hug": 18,
+          "yes": 18,
           "omg": 1
         },
         "isOP": false
@@ -4785,7 +4862,7 @@
         "text": "This is more common than people admit.",
         "timestamp": "9h ago",
         "reactions": {
-          "hug": 19,
+          "yes": 19,
           "omg": 3
         },
         "isOP": false
@@ -4796,7 +4873,7 @@
         "text": "Money secrets destroy trust quietly.",
         "timestamp": "2h ago",
         "reactions": {
-          "hug": 5,
+          "yes": 5,
           "omg": 12
         },
         "isOP": false
@@ -4806,7 +4883,7 @@
         "user": "CipherLemon",
         "timestamp": "5h ago",
         "reactions": {
-          "hug": 13,
+          "yes": 13,
           "omg": 9
         },
         "isOP": false
@@ -4820,9 +4897,10 @@
     "topic": "social",
     "timestamp": "1 day ago",
     "reactions": {
-      "hug": 109,
-      "omg": 161,
-      "meh": 3
+      "yawn": 14,
+      "nah": 19,
+      "yes": 109,
+      "omg": 161
     },
     "replyCount": 6,
     "replies": [
@@ -4832,7 +4910,7 @@
         "text": "This made me put my phone down for a minute.",
         "timestamp": "9h ago",
         "reactions": {
-          "hug": 11,
+          "yes": 11,
           "omg": 1
         },
         "isOP": false
@@ -4843,7 +4921,7 @@
         "text": "I do this too and hate it.",
         "timestamp": "2h ago",
         "reactions": {
-          "hug": 20,
+          "yes": 20,
           "omg": 10
         },
         "isOP": false
@@ -4854,7 +4932,7 @@
         "text": "You're not alone in this split.",
         "timestamp": "9h ago",
         "reactions": {
-          "hug": 2,
+          "yes": 2,
           "omg": 5
         },
         "isOP": false
@@ -4865,7 +4943,7 @@
         "text": "Internet persona vs real life is too real.",
         "timestamp": "2h ago",
         "reactions": {
-          "hug": 18,
+          "yes": 18,
           "omg": 1
         },
         "isOP": false
@@ -4876,7 +4954,7 @@
         "text": "Social media rewards masks, not honesty.",
         "timestamp": "2h ago",
         "reactions": {
-          "hug": 17,
+          "yes": 17,
           "omg": 6
         },
         "isOP": false
@@ -4886,7 +4964,7 @@
         "user": "BlueVenom",
         "timestamp": "2h ago",
         "reactions": {
-          "hug": 11,
+          "yes": 11,
           "omg": 14
         },
         "isOP": false
@@ -4900,9 +4978,10 @@
     "topic": "family",
     "timestamp": "32 minutes ago",
     "reactions": {
-      "hug": 96,
-      "omg": 119,
-      "meh": 11
+      "yawn": 1,
+      "nah": 13,
+      "yes": 96,
+      "omg": 119
     },
     "replyCount": 5,
     "replies": [
@@ -4912,7 +4991,7 @@
         "text": "I hope you find one honest conversation soon.",
         "timestamp": "9h ago",
         "reactions": {
-          "hug": 2,
+          "yes": 2,
           "omg": 14
         },
         "isOP": false
@@ -4923,7 +5002,7 @@
         "text": "Family roles trap people for decades.",
         "timestamp": "5h ago",
         "reactions": {
-          "hug": 22,
+          "yes": 22,
           "omg": 7
         },
         "isOP": false
@@ -4934,7 +5013,7 @@
         "text": "We all perform normal for our parents.",
         "timestamp": "2h ago",
         "reactions": {
-          "hug": 7,
+          "yes": 7,
           "omg": 10
         },
         "isOP": false
@@ -4945,7 +5024,7 @@
         "text": "This one hurt to read.",
         "timestamp": "2h ago",
         "reactions": {
-          "hug": 11,
+          "yes": 11,
           "omg": 7
         },
         "isOP": false
@@ -4956,7 +5035,7 @@
         "text": "You're not evil for feeling complicated things.",
         "timestamp": "28m ago",
         "reactions": {
-          "hug": 18,
+          "yes": 18,
           "omg": 6
         },
         "isOP": false
@@ -4970,9 +5049,10 @@
     "topic": "work",
     "timestamp": "5 hours ago",
     "reactions": {
-      "hug": 92,
-      "omg": 167,
-      "meh": 18
+      "yawn": 1,
+      "nah": 25,
+      "yes": 92,
+      "omg": 167
     },
     "replyCount": 5,
     "replies": [
@@ -4982,7 +5062,7 @@
         "text": "I laughed because this is every office ever.",
         "timestamp": "2h ago",
         "reactions": {
-          "hug": 14,
+          "yes": 14,
           "omg": 9
         },
         "isOP": false
@@ -4993,7 +5073,7 @@
         "text": "This belongs in a workplace confessions book.",
         "timestamp": "5h ago",
         "reactions": {
-          "hug": 16,
+          "yes": 16,
           "omg": 5
         },
         "isOP": false
@@ -5004,7 +5084,7 @@
         "text": "Corporate theater is exhausting.",
         "timestamp": "9h ago",
         "reactions": {
-          "hug": 15,
+          "yes": 15,
           "omg": 5
         },
         "isOP": false
@@ -5015,7 +5095,7 @@
         "text": "You're surviving a broken system, not failing.",
         "timestamp": "1h ago",
         "reactions": {
-          "hug": 3,
+          "yes": 3,
           "omg": 9
         },
         "isOP": false
@@ -5026,7 +5106,7 @@
         "text": "Document everything and protect yourself.",
         "timestamp": "12m ago",
         "reactions": {
-          "hug": 3,
+          "yes": 3,
           "omg": 14
         },
         "isOP": false
@@ -5040,9 +5120,10 @@
     "topic": "school",
     "timestamp": "9 hours ago",
     "reactions": {
-      "hug": 162,
-      "omg": 39,
-      "meh": 18
+      "yawn": 6,
+      "nah": 18,
+      "yes": 162,
+      "omg": 39
     },
     "replyCount": 5,
     "replies": [
@@ -5052,7 +5133,7 @@
         "text": "Academic pressure turns people feral.",
         "timestamp": "1h ago",
         "reactions": {
-          "hug": 19,
+          "yes": 19,
           "omg": 12
         },
         "isOP": false
@@ -5063,7 +5144,7 @@
         "text": "The system rewards outcomes, not integrity.",
         "timestamp": "9h ago",
         "reactions": {
-          "hug": 17,
+          "yes": 17,
           "omg": 5
         },
         "isOP": false
@@ -5074,7 +5155,7 @@
         "text": "I can't decide if this is genius or terrifying.",
         "timestamp": "9h ago",
         "reactions": {
-          "hug": 9,
+          "yes": 9,
           "omg": 4
         },
         "isOP": false
@@ -5085,7 +5166,7 @@
         "text": "Student survival mode is wild.",
         "timestamp": "1h ago",
         "reactions": {
-          "hug": 15,
+          "yes": 15,
           "omg": 0
         },
         "isOP": false
@@ -5096,7 +5177,7 @@
         "text": "You should probably never tweet this from your real account.",
         "timestamp": "1h ago",
         "reactions": {
-          "hug": 21,
+          "yes": 21,
           "omg": 5
         },
         "isOP": false
@@ -5105,33 +5186,313 @@
   }
 ];
 
-    const monthTopSecrets = [
-      { id: 201, username: "QuietOrbit", text: "I accepted a promotion, then quietly trained my replacement because I already signed with a competitor for double pay.", topic: "work", timestamp: "3 days ago", reactions: { hug: 942, omg: 615, meh: 41 }, replyCount: 176, replies: [] },
-      { id: 202, username: "StaticWillow", text: "I told my family I was in grad school. I've actually been bartending nights and paying off their debt without telling them.", topic: "family", timestamp: "5 days ago", reactions: { hug: 1081, omg: 502, meh: 33 }, replyCount: 198, replies: [] },
-      { id: 203, username: "PaperVoltage", text: "I reported my own startup to a regulator because my cofounder was faking safety reports.", topic: "work", timestamp: "2 days ago", reactions: { hug: 731, omg: 844, meh: 66 }, replyCount: 164, replies: [] },
-      { id: 204, username: "MutedCompass", text: "I sold my wedding venue deposit to a stranger and used the money to move out before my fiance could drain my savings again.", topic: "relationships", timestamp: "6 days ago", reactions: { hug: 1198, omg: 721, meh: 48 }, replyCount: 241, replies: [] },
-      { id: 205, username: "NightParcel", text: "I discovered my landlord was listing my apartment as a fake vacation rental while I was at work, so I changed the locks and called code enforcement.", topic: "money", timestamp: "1 week ago", reactions: { hug: 664, omg: 939, meh: 91 }, replyCount: 153, replies: [] },
-      { id: 206, username: "GreyLantern", text: "I pretended to forget my ex's birthday to test if he noticed mine. He didn't. That was my closure.", topic: "relationships", timestamp: "4 days ago", reactions: { hug: 882, omg: 377, meh: 52 }, replyCount: 129, replies: [] },
-      { id: 207, username: "VelvetSignal", text: "I reused old meal photos to convince my friends I was okay while I was rationing canned soup for two weeks.", topic: "health", timestamp: "5 days ago", reactions: { hug: 1255, omg: 291, meh: 24 }, replyCount: 207, replies: [] },
-      { id: 208, username: "CipherHorizon", text: "I found out my class group chat had a fake account to bait screenshots. I ran it.", topic: "school", timestamp: "2 days ago", reactions: { hug: 498, omg: 1012, meh: 112 }, replyCount: 137, replies: [] },
-      { id: 209, username: "RogueMurmur", text: "I secretly paid my brother's bail, then told him it came from a church fund so he'd quit gambling out of guilt.", topic: "crime", timestamp: "6 days ago", reactions: { hug: 973, omg: 588, meh: 61 }, replyCount: 171, replies: [] },
-      { id: 210, username: "AshProtocol", text: "I submitted my resignation in a scheduled email set for 2:00 a.m. so they couldn't guilt me into staying.", topic: "work", timestamp: "3 days ago", reactions: { hug: 846, omg: 463, meh: 38 }, replyCount: 148, replies: [] }
-    ];
+const monthTopSecrets = [
+  {
+    "id": 201,
+    "username": "QuietOrbit",
+    "text": "I accepted a promotion, then quietly trained my replacement because I already signed with a competitor for double pay.",
+    "topic": "work",
+    "timestamp": "3 days ago",
+    "reactions": {
+      "yawn": 65,
+      "nah": 101,
+      "yes": 942,
+      "omg": 615
+    },
+    "replyCount": 176,
+    "replies": []
+  },
+  {
+    "id": 202,
+    "username": "StaticWillow",
+    "text": "I told my family I was in grad school. I've actually been bartending nights and paying off their debt without telling them.",
+    "topic": "family",
+    "timestamp": "5 days ago",
+    "reactions": {
+      "yawn": 68,
+      "nah": 36,
+      "yes": 1081,
+      "omg": 502
+    },
+    "replyCount": 198,
+    "replies": []
+  },
+  {
+    "id": 203,
+    "username": "PaperVoltage",
+    "text": "I reported my own startup to a regulator because my cofounder was faking safety reports.",
+    "topic": "work",
+    "timestamp": "2 days ago",
+    "reactions": {
+      "yawn": 22,
+      "nah": 58,
+      "yes": 731,
+      "omg": 844
+    },
+    "replyCount": 164,
+    "replies": []
+  },
+  {
+    "id": 204,
+    "username": "MutedCompass",
+    "text": "I sold my wedding venue deposit to a stranger and used the money to move out before my fiance could drain my savings again.",
+    "topic": "relationships",
+    "timestamp": "6 days ago",
+    "reactions": {
+      "yawn": 68,
+      "nah": 30,
+      "yes": 1198,
+      "omg": 721
+    },
+    "replyCount": 241,
+    "replies": []
+  },
+  {
+    "id": 205,
+    "username": "NightParcel",
+    "text": "I discovered my landlord was listing my apartment as a fake vacation rental while I was at work, so I changed the locks and called code enforcement.",
+    "topic": "money",
+    "timestamp": "1 week ago",
+    "reactions": {
+      "yawn": 28,
+      "nah": 38,
+      "yes": 664,
+      "omg": 939
+    },
+    "replyCount": 153,
+    "replies": []
+  },
+  {
+    "id": 206,
+    "username": "GreyLantern",
+    "text": "I pretended to forget my ex's birthday to test if he noticed mine. He didn't. That was my closure.",
+    "topic": "relationships",
+    "timestamp": "4 days ago",
+    "reactions": {
+      "yawn": 33,
+      "nah": 130,
+      "yes": 882,
+      "omg": 377
+    },
+    "replyCount": 129,
+    "replies": []
+  },
+  {
+    "id": 207,
+    "username": "VelvetSignal",
+    "text": "I reused old meal photos to convince my friends I was okay while I was rationing canned soup for two weeks.",
+    "topic": "health",
+    "timestamp": "5 days ago",
+    "reactions": {
+      "yawn": 47,
+      "nah": 80,
+      "yes": 1255,
+      "omg": 291
+    },
+    "replyCount": 207,
+    "replies": []
+  },
+  {
+    "id": 208,
+    "username": "CipherHorizon",
+    "text": "I found out my class group chat had a fake account to bait screenshots. I ran it.",
+    "topic": "school",
+    "timestamp": "2 days ago",
+    "reactions": {
+      "yawn": 58,
+      "nah": 146,
+      "yes": 498,
+      "omg": 1012
+    },
+    "replyCount": 137,
+    "replies": []
+  },
+  {
+    "id": 209,
+    "username": "RogueMurmur",
+    "text": "I secretly paid my brother's bail, then told him it came from a church fund so he'd quit gambling out of guilt.",
+    "topic": "crime",
+    "timestamp": "6 days ago",
+    "reactions": {
+      "yawn": 45,
+      "nah": 49,
+      "yes": 973,
+      "omg": 588
+    },
+    "replyCount": 171,
+    "replies": []
+  },
+  {
+    "id": 210,
+    "username": "AshProtocol",
+    "text": "I submitted my resignation in a scheduled email set for 2:00 a.m. so they couldn't guilt me into staying.",
+    "topic": "work",
+    "timestamp": "3 days ago",
+    "reactions": {
+      "yawn": 24,
+      "nah": 68,
+      "yes": 846,
+      "omg": 463
+    },
+    "replyCount": 148,
+    "replies": []
+  }
+];
 
-    const yearTopSecrets = [
-      { id: 301, username: "GhostAtlas", text: "I testified against my own uncle in a fraud case that stole retirement money from my hometown. Half the town still hates me.", topic: "family", timestamp: "8 months ago", reactions: { hug: 18240, omg: 9310, meh: 654 }, replyCount: 2104, replies: [] },
-      { id: 302, username: "NullHarbor", text: "I leaked internal chat logs proving my company hid a safety defect. The recall happened two days later.", topic: "work", timestamp: "6 months ago", reactions: { hug: 13980, omg: 15420, meh: 902 }, replyCount: 1876, replies: [] },
-      { id: 303, username: "LunaCipher", text: "I called off my wedding from the airport gate and boarded my honeymoon flight alone with a one-way ticket.", topic: "relationships", timestamp: "10 months ago", reactions: { hug: 22560, omg: 8420, meh: 710 }, replyCount: 2643, replies: [] },
-      { id: 304, username: "ObsidianNote", text: "I found out my biological father was my high school principal after a DNA kit gift exchange went wrong.", topic: "family", timestamp: "11 months ago", reactions: { hug: 10340, omg: 19880, meh: 1204 }, replyCount: 2338, replies: [] },
-      { id: 305, username: "SilentVector", text: "I won the lottery, told nobody, and kept driving my broken sedan because sudden money scares me more than poverty did.", topic: "money", timestamp: "7 months ago", reactions: { hug: 16870, omg: 11160, meh: 988 }, replyCount: 1942, replies: [] },
-      { id: 306, username: "AmberNoir", text: "I stopped my own surgery moments before anesthesia because the nurse read the wrong chart out loud.", topic: "health", timestamp: "5 months ago", reactions: { hug: 12420, omg: 17610, meh: 843 }, replyCount: 2188, replies: [] },
-      { id: 307, username: "DeltaVeil", text: "I discovered my viral study account was actually run by three classmates. I was one of them and never confessed until now.", topic: "school", timestamp: "9 months ago", reactions: { hug: 11760, omg: 14290, meh: 1337 }, replyCount: 1598, replies: [] },
-      { id: 308, username: "FableCircuit", text: "I tipped off investigators about a trafficking ring using a burner phone from a grocery store parking lot.", topic: "crime", timestamp: "4 months ago", reactions: { hug: 20940, omg: 12450, meh: 522 }, replyCount: 2864, replies: [] },
-      { id: 309, username: "IronWhisper", text: "I stood up at my own award ceremony and exposed that the project was plagiarized before accepting the trophy.", topic: "work", timestamp: "3 months ago", reactions: { hug: 14970, omg: 16330, meh: 1118 }, replyCount: 1729, replies: [] },
-      { id: 310, username: "PolarInk", text: "I pretended to be a random volunteer online for months just to help my grieving mom heal after my brother died. She never knew it was me.", topic: "health", timestamp: "12 months ago", reactions: { hug: 27180, omg: 9680, meh: 439 }, replyCount: 3115, replies: [] }
-    ];
+const yearTopSecrets = [
+  {
+    "id": 301,
+    "username": "GhostAtlas",
+    "text": "I testified against my own uncle in a fraud case that stole retirement money from my hometown. Half the town still hates me.",
+    "topic": "family",
+    "timestamp": "8 months ago",
+    "reactions": {
+      "yawn": 153,
+      "nah": 436,
+      "yes": 18240,
+      "omg": 9310
+    },
+    "replyCount": 2104,
+    "replies": []
+  },
+  {
+    "id": 302,
+    "username": "NullHarbor",
+    "text": "I leaked internal chat logs proving my company hid a safety defect. The recall happened two days later.",
+    "topic": "work",
+    "timestamp": "6 months ago",
+    "reactions": {
+      "yawn": 193,
+      "nah": 445,
+      "yes": 13980,
+      "omg": 15420
+    },
+    "replyCount": 1876,
+    "replies": []
+  },
+  {
+    "id": 303,
+    "username": "LunaCipher",
+    "text": "I called off my wedding from the airport gate and boarded my honeymoon flight alone with a one-way ticket.",
+    "topic": "relationships",
+    "timestamp": "10 months ago",
+    "reactions": {
+      "yawn": 366,
+      "nah": 405,
+      "yes": 22560,
+      "omg": 8420
+    },
+    "replyCount": 2643,
+    "replies": []
+  },
+  {
+    "id": 304,
+    "username": "ObsidianNote",
+    "text": "I found out my biological father was my high school principal after a DNA kit gift exchange went wrong.",
+    "topic": "family",
+    "timestamp": "11 months ago",
+    "reactions": {
+      "yawn": 225,
+      "nah": 242,
+      "yes": 10340,
+      "omg": 19880
+    },
+    "replyCount": 2338,
+    "replies": []
+  },
+  {
+    "id": 305,
+    "username": "SilentVector",
+    "text": "I won the lottery, told nobody, and kept driving my broken sedan because sudden money scares me more than poverty did.",
+    "topic": "money",
+    "timestamp": "7 months ago",
+    "reactions": {
+      "yawn": 172,
+      "nah": 749,
+      "yes": 16870,
+      "omg": 11160
+    },
+    "replyCount": 1942,
+    "replies": []
+  },
+  {
+    "id": 306,
+    "username": "AmberNoir",
+    "text": "I stopped my own surgery moments before anesthesia because the nurse read the wrong chart out loud.",
+    "topic": "health",
+    "timestamp": "5 months ago",
+    "reactions": {
+      "yawn": 259,
+      "nah": 498,
+      "yes": 12420,
+      "omg": 17610
+    },
+    "replyCount": 2188,
+    "replies": []
+  },
+  {
+    "id": 307,
+    "username": "DeltaVeil",
+    "text": "I discovered my viral study account was actually run by three classmates. I was one of them and never confessed until now.",
+    "topic": "school",
+    "timestamp": "9 months ago",
+    "reactions": {
+      "yawn": 388,
+      "nah": 476,
+      "yes": 11760,
+      "omg": 14290
+    },
+    "replyCount": 1598,
+    "replies": []
+  },
+  {
+    "id": 308,
+    "username": "FableCircuit",
+    "text": "I tipped off investigators about a trafficking ring using a burner phone from a grocery store parking lot.",
+    "topic": "crime",
+    "timestamp": "4 months ago",
+    "reactions": {
+      "yawn": 331,
+      "nah": 662,
+      "yes": 20940,
+      "omg": 12450
+    },
+    "replyCount": 2864,
+    "replies": []
+  },
+  {
+    "id": 309,
+    "username": "IronWhisper",
+    "text": "I stood up at my own award ceremony and exposed that the project was plagiarized before accepting the trophy.",
+    "topic": "work",
+    "timestamp": "3 months ago",
+    "reactions": {
+      "yawn": 257,
+      "nah": 670,
+      "yes": 14970,
+      "omg": 16330
+    },
+    "replyCount": 1729,
+    "replies": []
+  },
+  {
+    "id": 310,
+    "username": "PolarInk",
+    "text": "I pretended to be a random volunteer online for months just to help my grieving mom heal after my brother died. She never knew it was me.",
+    "topic": "health",
+    "timestamp": "12 months ago",
+    "reactions": {
+      "yawn": 168,
+      "nah": 789,
+      "yes": 27180,
+      "omg": 9680
+    },
+    "replyCount": 3115,
+    "replies": []
+  }
+];
 
-    const state = {
+const state = {
       filter: "all",
       rankPeriod: "today",
       secrets: [],
@@ -5191,22 +5552,23 @@
     }
 
     function engagementScore(secret) {
-      const hug = secret.reactions.hug;
+      const yes = secret.reactions.yes;
       const omg = secret.reactions.omg;
-      const meh = secret.reactions.meh;
-      const base = (hug * 3) + (omg * 2) + (secret.replyCount * 4) - meh;
+      const yawn = secret.reactions.yawn;
+      const nah = secret.reactions.nah;
+      const base = (yes * 3) + (omg * 2) + (secret.replyCount * 4) - yawn - (nah * 2);
       const ageHours = parseAgeHours(secret.timestamp);
       const timeFactor = Math.max(0.5, 1 - ageHours / 168);
       return Math.max(0, Math.round(base * timeFactor));
     }
 
     function badgeFor(secret) {
-      const rel = secret.reactions.hug;
+      const rel = secret.reactions.yes;
       const shock = secret.reactions.omg;
       const discussed = secret.replyCount * 9;
       if (discussed >= rel && discussed >= shock) return "💬 Most Discussed";
       if (shock >= rel) return "😱 Most Shocking";
-      return "🫂 Most Relatable";
+      return "👍 Most Relatable";
     }
 
     function topicList() {
@@ -5215,14 +5577,14 @@
 
     function activeMap(secretId) {
       if (!state.activeSecretReactions[secretId]) {
-        state.activeSecretReactions[secretId] = { hug: false, omg: false, meh: false };
+        state.activeSecretReactions[secretId] = { yawn: false, nah: false, yes: false, omg: false };
       }
       return state.activeSecretReactions[secretId];
     }
 
     function activeReplyMap(replyId) {
       if (!state.activeReplyReactions[replyId]) {
-        state.activeReplyReactions[replyId] = { hug: false, omg: false };
+        state.activeReplyReactions[replyId] = { yes: false, omg: false };
       }
       return state.activeReplyReactions[replyId];
     }
@@ -5249,7 +5611,7 @@
       const cards = filteredSecrets().map(secret => {
         const active = activeMap(secret.id);
         return `
-          <article class="card" data-open-id="${secret.id}">
+          <article class="card ${active.yawn ? "yawned" : ""}" data-open-id="${secret.id}">
             <div class="meta">
               <span>${secret.username} · ${secret.timestamp}</span>
               <span class="topic-chip">${secret.topic}</span>
@@ -5257,13 +5619,14 @@
             <p class="secret-text">${escapeHtml(secret.text)}</p>
             <div class="reactions">
               <div class="reaction-left">
-                <button class="pill ${active.hug ? "active-hug" : ""}" data-react="hug" data-id="${secret.id}">🫂 <span>${secret.reactions.hug}</span></button>
-                <button class="pill ${active.omg ? "active-omg" : ""}" data-react="omg" data-id="${secret.id}">😱 <span>${secret.reactions.omg}</span></button>
-                <button class="pill ${active.meh ? "active-meh" : ""}" data-react="meh" data-id="${secret.id}">🥱 <span>${secret.reactions.meh}</span></button>
+                <button class="pill ${active.yawn ? "active-yawn" : ""}" data-react="yawn" data-id="${secret.id}"><span class="emoji">🥱</span> <span>${secret.reactions.yawn}</span></button>
+                <button class="pill ${active.nah ? "active-nah" : ""}" data-react="nah" data-id="${secret.id}"><span class="emoji">👎</span> <span>${secret.reactions.nah}</span></button>
+                <button class="pill ${active.yes ? "active-yes" : ""}" data-react="yes" data-id="${secret.id}"><span class="emoji">👍</span> <span>${secret.reactions.yes}</span></button>
+                <button class="pill ${active.omg ? "active-omg" : ""}" data-react="omg" data-id="${secret.id}"><span class="emoji">😱</span> <span>${secret.reactions.omg}</span></button>
               </div>
               <div class="reaction-left">
                 <div class="reaction-divider"></div>
-                <button class="pill reply active-reply" data-open-id="${secret.id}">💬 <span>${pillLabel(secret.replyCount, "reply")}</span></button>
+                <button class="pill reply active-reply" data-open-id="${secret.id}"><span class="emoji">💬</span> <span>${pillLabel(secret.replyCount, "reply")}</span></button>
               </div>
             </div>
           </article>
@@ -5327,7 +5690,7 @@
       if (state.replySort === "newest") {
         return arr.sort((a, b) => b.id - a.id);
       }
-      return arr.sort((a, b) => (b.reactions.hug - a.reactions.hug) || (b.id - a.id));
+      return arr.sort((a, b) => (b.reactions.yes - a.reactions.yes) || (b.id - a.id));
     }
 
     function renderDetail() {
@@ -5346,7 +5709,7 @@
                 ${reply.isOP ? '<span class="op-pill">OP</span>' : ""}
               </div>
               <div class="reply-actions">
-                <button class="mini ${rAct.hug ? "active-hug" : ""}" data-reply-react="hug" data-reply-id="${reply.id}">🫂 ${reply.reactions.hug}</button>
+                <button class="mini ${rAct.yes ? "active-yes" : ""}" data-reply-react="yes" data-reply-id="${reply.id}">👍 ${reply.reactions.yes}</button>
                 <button class="mini ${rAct.omg ? "active-omg" : ""}" data-reply-react="omg" data-reply-id="${reply.id}">😱 ${reply.reactions.omg}</button>
               </div>
             </div>
@@ -5364,9 +5727,10 @@
           <p class="secret-text">${escapeHtml(secret.text)}</p>
           <div class="reactions">
             <div class="reaction-left">
-              <button class="pill ${act.hug ? "active-hug" : ""}" data-react="hug" data-id="${secret.id}">🫂 <span>${secret.reactions.hug}</span></button>
-              <button class="pill ${act.omg ? "active-omg" : ""}" data-react="omg" data-id="${secret.id}">😱 <span>${secret.reactions.omg}</span></button>
-              <button class="pill ${act.meh ? "active-meh" : ""}" data-react="meh" data-id="${secret.id}">🥱 <span>${secret.reactions.meh}</span></button>
+              <button class="pill ${act.yawn ? "active-yawn" : ""}" data-react="yawn" data-id="${secret.id}"><span class="emoji">🥱</span> <span>${secret.reactions.yawn}</span></button>
+              <button class="pill ${act.nah ? "active-nah" : ""}" data-react="nah" data-id="${secret.id}"><span class="emoji">👎</span> <span>${secret.reactions.nah}</span></button>
+              <button class="pill ${act.yes ? "active-yes" : ""}" data-react="yes" data-id="${secret.id}"><span class="emoji">👍</span> <span>${secret.reactions.yes}</span></button>
+              <button class="pill ${act.omg ? "active-omg" : ""}" data-react="omg" data-id="${secret.id}"><span class="emoji">😱</span> <span>${secret.reactions.omg}</span></button>
             </div>
           </div>
         </section>
@@ -5426,7 +5790,7 @@
         user: replyUsers[(nextId + secret.id) % replyUsers.length],
         text,
         timestamp: "just now",
-        reactions: { hug: 0, omg: 0 },
+        reactions: { yes: 0, omg: 0 },
         isOP: false
       });
       secret.replyCount = secret.replies.length;
