@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pick Your Reaction Style</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #07090f;
+    color: #eff3ff;
+    font-family: "Segoe UI", system-ui, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+  }
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 8px;
+    background: linear-gradient(135deg, #59c7ff, #a97eff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .sub { color: #8a9cc4; margin-bottom: 40px; font-size: 0.95rem; }
+  .grid {
+    display: grid;
+    grid-template-columns: 180px repeat(4, 1fr);
+    gap: 0;
+    max-width: 750px;
+    width: 100%;
+  }
+  .header-cell {
+    padding: 12px 8px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: #7a90c0;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    border-bottom: 1px solid rgba(148,171,233,0.15);
+  }
+  .header-cell:first-child { text-align: left; }
+  .row-label {
+    display: flex;
+    align-items: center;
+    padding: 20px 12px;
+    font-weight: 700;
+    font-size: 1.05rem;
+    border-bottom: 1px solid rgba(148,171,233,0.08);
+  }
+  .row-label .tag {
+    font-size: 0.7rem;
+    color: #07090f;
+    background: #59c7ff;
+    padding: 2px 8px;
+    border-radius: 8px;
+    margin-left: 10px;
+    font-weight: 600;
+  }
+  .cell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 8px;
+    border-bottom: 1px solid rgba(148,171,233,0.08);
+  }
+  .cell img {
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+    transition: transform 0.2s;
+  }
+  .cell img:hover { transform: scale(1.3); }
+  .cell .native {
+    font-size: 48px;
+    line-height: 1;
+  }
+  .cell .fallback {
+    width: 56px;
+    height: 56px;
+    background: rgba(148,171,233,0.1);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.65rem;
+    color: #5a6a90;
+  }
+  .pick-hint {
+    margin-top: 40px;
+    color: #6a7da8;
+    font-size: 0.85rem;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<h1>Pick Your Reaction Style</h1>
+<p class="sub">Compare icon packages for TellAnything reactions</p>
+
+<div class="grid">
+  <!-- Header -->
+  <div class="header-cell">Package</div>
+  <div class="header-cell">🥱 Yawn</div>
+  <div class="header-cell">👎 Nah</div>
+  <div class="header-cell">👍 Yes</div>
+  <div class="header-cell">😱 OMG</div>
+
+  <!-- 1. Twemoji -->
+  <div class="row-label">Twemoji <span class="tag">Twitter</span></div>
+  <div class="cell"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f971.svg" alt="yawn" onerror="this.outerHTML='<div class=fallback>N/A</div>'"></div>
+  <div class="cell"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f44e.svg" alt="nah" onerror="this.outerHTML='<div class=fallback>N/A</div>'"></div>
+  <div class="cell"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f44d.svg" alt="yes" onerror="this.outerHTML='<div class=fallback>N/A</div>'"></div>
+  <div class="cell"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f631.svg" alt="omg" onerror="this.outerHTML='<div class=fallback>N/A</div>'"></div>
+
+  <!-- 2. OpenMoji -->
+  <div class="row-label">OpenMoji <span class="tag">Open Source</span></div>
+  <div class="cell"><img src="https://cdn.jsdelivr.net/gh/hfg-gmuend/openmoji@15.1/color/svg/1F971.svg" alt="yawn" onerror="this.outerHTML='<div class=fallback>N/A</div>'"></div>
+  <div class="cell"><img src="https://cdn.jsdelivr.net/gh/hfg-gmuend/openmoji@15.1/color/svg/1F44E.svg" alt="nah" onerror="this.outerHTML='<div class=fallback>N/A</div>'"></div>
+  <div class="cell"><img src="https://cdn.jsdelivr.net/gh/hfg-gmuend/openmoji@15.1/color/svg/1F44D.svg" alt="yes" onerror="this.outerHTML='<div class=fallback>N/A</div>'"></div>
+  <div class="cell"><img src="https://cdn.jsdelivr.net/gh/hfg-gmuend/openmoji@15.1/color/svg/1F631.svg" alt="omg" onerror="this.outerHTML='<div class=fallback>N/A</div>'"></div>
+
+  <!-- 3. Noto Emoji (Google) -->
+  <div class="row-label">Noto <span class="tag">Google</span></div>
+  <div class="cell"><img src="https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@main/svg/emoji_u1f971.svg" alt="yawn" onerror="this.outerHTML='<div class=fallback>N/A</div>'"></div>
+  <div class="cell"><img src="https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@main/svg/emoji_u1f44e.svg" alt="nah" onerror="this.outerHTML='<div class=fallback>N/A</div>'"></div>
+  <div class="cell"><img src="https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@main/svg/emoji_u1f44d.svg" alt="yes" onerror="this.outerHTML='<div class=fallback>N/A</div>'"></div>
+  <div class="cell"><img src="https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@main/svg/emoji_u1f631.svg" alt="omg" onerror="this.outerHTML='<div class=fallback>N/A</div>'"></div>
+
+  <!-- 4. Fluent Emoji (Microsoft) -->
+  <div class="row-label">Fluent <span class="tag">Microsoft</span></div>
+  <div class="cell"><img src="https://raw.githubusercontent.com/nicedoc/fluent-emoji/main/Yawning%20Face/3D/yawning_face_3d.png" alt="yawn" onerror="this.src='https://raw.githubusercontent.com/nicedoc/fluent-emoji/main/🥱.png'; this.onerror=function(){this.outerHTML='<div class=fallback>N/A</div>'}"></div>
+  <div class="cell"><img src="https://raw.githubusercontent.com/nicedoc/fluent-emoji/main/Thumbs%20Down/3D/thumbs_down_3d.png" alt="nah" onerror="this.src='https://raw.githubusercontent.com/nicedoc/fluent-emoji/main/👎.png'; this.onerror=function(){this.outerHTML='<div class=fallback>N/A</div>'}"></div>
+  <div class="cell"><img src="https://raw.githubusercontent.com/nicedoc/fluent-emoji/main/Thumbs%20Up/3D/thumbs_up_3d.png" alt="yes" onerror="this.src='https://raw.githubusercontent.com/nicedoc/fluent-emoji/main/👍.png'; this.onerror=function(){this.outerHTML='<div class=fallback>N/A</div>'}"></div>
+  <div class="cell"><img src="https://raw.githubusercontent.com/nicedoc/fluent-emoji/main/Face%20Screaming%20in%20Fear/3D/face_screaming_in_fear_3d.png" alt="omg" onerror="this.src='https://raw.githubusercontent.com/nicedoc/fluent-emoji/main/😱.png'; this.onerror=function(){this.outerHTML='<div class=fallback>N/A</div>'}"></div>
+
+  <!-- 5. Native Emoji -->
+  <div class="row-label">Native <span class="tag">Current</span></div>
+  <div class="cell"><span class="native">🥱</span></div>
+  <div class="cell"><span class="native">👎</span></div>
+  <div class="cell"><span class="native">👍</span></div>
+  <div class="cell"><span class="native">😱</span></div>
+</div>
+
+<p class="pick-hint">Hover to enlarge · Tell Mike which row you like best</p>
+
+</body>
+</html>
