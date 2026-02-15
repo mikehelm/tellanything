@@ -344,11 +344,40 @@
       padding: 14px;
     }
 
-    .panel h2 {
-      margin: 0 0 8px;
-      font-size: 1rem;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
+    .panel-head {
+      margin-bottom: 10px;
+    }
+
+    .rank-period-select {
+      width: 100%;
+      appearance: none;
+      border: 1px solid rgba(128, 164, 230, 0.36);
+      border-radius: 12px;
+      padding: 10px 40px 10px 12px;
+      color: #eaf1ff;
+      font-size: 0.88rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      background:
+        linear-gradient(165deg, rgba(23, 33, 57, 0.95), rgba(11, 16, 29, 0.95)),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M3.2 5.4L8 10.2l4.8-4.8' fill='none' stroke='%2388ceff' stroke-width='1.9' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat, no-repeat;
+      background-position: center, right 12px center;
+      background-size: auto, 13px;
+      box-shadow: inset 0 1px 0 rgba(208, 227, 255, 0.08);
+      cursor: pointer;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .rank-period-select:focus {
+      outline: none;
+      border-color: rgba(106, 193, 255, 0.9);
+      box-shadow: 0 0 0 3px rgba(89, 176, 255, 0.2);
+    }
+
+    .rank-period-select option {
+      background: #0d1425;
+      color: #eaf1ff;
     }
 
     .rank-list {
@@ -366,6 +395,10 @@
 
     .rank-item:hover {
       border-color: rgba(161, 193, 255, 0.45);
+    }
+
+    .rank-item.static {
+      cursor: default;
     }
 
     .rank-head {
@@ -666,7 +699,13 @@
       <div class="feed" id="feed"></div>
       <aside class="sidebar">
         <div class="panel">
-          <h2>Top 10 Tonight</h2>
+          <div class="panel-head">
+            <select id="rankPeriod" class="rank-period-select" aria-label="Choose Top 10 period">
+              <option value="today" selected>Top 10 Today</option>
+              <option value="month">Top 10 This Month</option>
+              <option value="year">Top 10 This Year</option>
+            </select>
+          </div>
           <div class="rank-list" id="rankList"></div>
         </div>
       </aside>
@@ -5066,8 +5105,35 @@
   }
 ];
 
+    const monthTopSecrets = [
+      { id: 201, username: "QuietOrbit", text: "I accepted a promotion, then quietly trained my replacement because I already signed with a competitor for double pay.", topic: "work", timestamp: "3 days ago", reactions: { hug: 942, omg: 615, meh: 41 }, replyCount: 176, replies: [] },
+      { id: 202, username: "StaticWillow", text: "I told my family I was in grad school. I've actually been bartending nights and paying off their debt without telling them.", topic: "family", timestamp: "5 days ago", reactions: { hug: 1081, omg: 502, meh: 33 }, replyCount: 198, replies: [] },
+      { id: 203, username: "PaperVoltage", text: "I reported my own startup to a regulator because my cofounder was faking safety reports.", topic: "work", timestamp: "2 days ago", reactions: { hug: 731, omg: 844, meh: 66 }, replyCount: 164, replies: [] },
+      { id: 204, username: "MutedCompass", text: "I sold my wedding venue deposit to a stranger and used the money to move out before my fiance could drain my savings again.", topic: "relationships", timestamp: "6 days ago", reactions: { hug: 1198, omg: 721, meh: 48 }, replyCount: 241, replies: [] },
+      { id: 205, username: "NightParcel", text: "I discovered my landlord was listing my apartment as a fake vacation rental while I was at work, so I changed the locks and called code enforcement.", topic: "money", timestamp: "1 week ago", reactions: { hug: 664, omg: 939, meh: 91 }, replyCount: 153, replies: [] },
+      { id: 206, username: "GreyLantern", text: "I pretended to forget my ex's birthday to test if he noticed mine. He didn't. That was my closure.", topic: "relationships", timestamp: "4 days ago", reactions: { hug: 882, omg: 377, meh: 52 }, replyCount: 129, replies: [] },
+      { id: 207, username: "VelvetSignal", text: "I reused old meal photos to convince my friends I was okay while I was rationing canned soup for two weeks.", topic: "health", timestamp: "5 days ago", reactions: { hug: 1255, omg: 291, meh: 24 }, replyCount: 207, replies: [] },
+      { id: 208, username: "CipherHorizon", text: "I found out my class group chat had a fake account to bait screenshots. I ran it.", topic: "school", timestamp: "2 days ago", reactions: { hug: 498, omg: 1012, meh: 112 }, replyCount: 137, replies: [] },
+      { id: 209, username: "RogueMurmur", text: "I secretly paid my brother's bail, then told him it came from a church fund so he'd quit gambling out of guilt.", topic: "crime", timestamp: "6 days ago", reactions: { hug: 973, omg: 588, meh: 61 }, replyCount: 171, replies: [] },
+      { id: 210, username: "AshProtocol", text: "I submitted my resignation in a scheduled email set for 2:00 a.m. so they couldn't guilt me into staying.", topic: "work", timestamp: "3 days ago", reactions: { hug: 846, omg: 463, meh: 38 }, replyCount: 148, replies: [] }
+    ];
+
+    const yearTopSecrets = [
+      { id: 301, username: "GhostAtlas", text: "I testified against my own uncle in a fraud case that stole retirement money from my hometown. Half the town still hates me.", topic: "family", timestamp: "8 months ago", reactions: { hug: 18240, omg: 9310, meh: 654 }, replyCount: 2104, replies: [] },
+      { id: 302, username: "NullHarbor", text: "I leaked internal chat logs proving my company hid a safety defect. The recall happened two days later.", topic: "work", timestamp: "6 months ago", reactions: { hug: 13980, omg: 15420, meh: 902 }, replyCount: 1876, replies: [] },
+      { id: 303, username: "LunaCipher", text: "I called off my wedding from the airport gate and boarded my honeymoon flight alone with a one-way ticket.", topic: "relationships", timestamp: "10 months ago", reactions: { hug: 22560, omg: 8420, meh: 710 }, replyCount: 2643, replies: [] },
+      { id: 304, username: "ObsidianNote", text: "I found out my biological father was my high school principal after a DNA kit gift exchange went wrong.", topic: "family", timestamp: "11 months ago", reactions: { hug: 10340, omg: 19880, meh: 1204 }, replyCount: 2338, replies: [] },
+      { id: 305, username: "SilentVector", text: "I won the lottery, told nobody, and kept driving my broken sedan because sudden money scares me more than poverty did.", topic: "money", timestamp: "7 months ago", reactions: { hug: 16870, omg: 11160, meh: 988 }, replyCount: 1942, replies: [] },
+      { id: 306, username: "AmberNoir", text: "I stopped my own surgery moments before anesthesia because the nurse read the wrong chart out loud.", topic: "health", timestamp: "5 months ago", reactions: { hug: 12420, omg: 17610, meh: 843 }, replyCount: 2188, replies: [] },
+      { id: 307, username: "DeltaVeil", text: "I discovered my viral study account was actually run by three classmates. I was one of them and never confessed until now.", topic: "school", timestamp: "9 months ago", reactions: { hug: 11760, omg: 14290, meh: 1337 }, replyCount: 1598, replies: [] },
+      { id: 308, username: "FableCircuit", text: "I tipped off investigators about a trafficking ring using a burner phone from a grocery store parking lot.", topic: "crime", timestamp: "4 months ago", reactions: { hug: 20940, omg: 12450, meh: 522 }, replyCount: 2864, replies: [] },
+      { id: 309, username: "IronWhisper", text: "I stood up at my own award ceremony and exposed that the project was plagiarized before accepting the trophy.", topic: "work", timestamp: "3 months ago", reactions: { hug: 14970, omg: 16330, meh: 1118 }, replyCount: 1729, replies: [] },
+      { id: 310, username: "PolarInk", text: "I pretended to be a random volunteer online for months just to help my grieving mom heal after my brother died. She never knew it was me.", topic: "health", timestamp: "12 months ago", reactions: { hug: 27180, omg: 9680, meh: 439 }, replyCount: 3115, replies: [] }
+    ];
+
     const state = {
       filter: "all",
+      rankPeriod: "today",
       secrets: [],
       selectedSecretId: null,
       replySort: "relatable",
@@ -5081,6 +5147,7 @@
       app: document.querySelector(".app"),
       feed: document.getElementById("feed"),
       rankList: document.getElementById("rankList"),
+      rankPeriod: document.getElementById("rankPeriod"),
       topicRow: document.getElementById("topicRow"),
       detail: document.getElementById("detail"),
       detailMain: document.getElementById("detailMain"),
@@ -5206,13 +5273,20 @@
       byId.feed.innerHTML = cards || `<div class="empty">No secrets in this topic yet.</div>`;
     }
 
+    function topRankSource() {
+      if (state.rankPeriod === "month") return monthTopSecrets;
+      if (state.rankPeriod === "year") return yearTopSecrets;
+      return state.secrets;
+    }
+
     function drawTopRank() {
-      const top = [...state.secrets]
+      const canOpen = state.rankPeriod === "today";
+      const top = [...topRankSource()]
         .sort((a, b) => engagementScore(b) - engagementScore(a))
         .slice(0, 10);
 
       byId.rankList.innerHTML = top.map((s, i) => `
-        <article class="rank-item" data-open-id="${s.id}">
+        <article class="rank-item ${canOpen ? "" : "static"}" ${canOpen ? `data-open-id="${s.id}"` : ""}>
           <div class="rank-head"><span>#${i + 1}</span><span>${engagementScore(s)} pts</span></div>
           <p class="rank-text">${escapeHtml(s.text)}</p>
           <div class="badge">${badgeFor(s)}</div>
@@ -5457,6 +5531,10 @@
 
       byId.app.addEventListener("click", onAppClick);
       byId.detail.addEventListener("click", onDetailClick);
+      byId.rankPeriod.addEventListener("change", () => {
+        state.rankPeriod = byId.rankPeriod.value;
+        drawTopRank();
+      });
       byId.backBtn.addEventListener("click", () => closeDetail());
       byId.sendReply.addEventListener("click", onSendReply);
       byId.replyText.addEventListener("input", () => {
