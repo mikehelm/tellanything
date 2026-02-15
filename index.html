@@ -288,23 +288,42 @@
       background: rgba(11, 17, 32, 0.72);
       border-radius: 999px;
       color: #e7eeff;
-      height: 48px;
-      min-width: 64px;
-      padding: 0 18px;
+      height: 54px;
+      min-width: 76px;
+      padding: 0 20px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 8px;
+      gap: 10px;
       font-weight: 700;
-      font-size: 1rem;
+      font-size: 1.1rem;
       cursor: pointer;
       transition: all 0.2s ease;
       user-select: none;
+      position: relative;
     }
 
     .pill .emoji {
-      font-size: 1.3em;
+      font-size: 1.6em;
       line-height: 1;
+    }
+
+    .pill[title]:hover::after {
+      content: attr(title);
+      position: absolute;
+      bottom: calc(100% + 8px);
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(15, 20, 35, 0.95);
+      color: #c8d6f5;
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 8px;
+      white-space: nowrap;
+      pointer-events: none;
+      border: 1px solid rgba(148,171,233,0.2);
+      z-index: 10;
     }
 
     .pill.reply {
@@ -5618,10 +5637,10 @@ const state = {
             <p class="secret-text">${escapeHtml(secret.text)}</p>
             <div class="reactions">
               <div class="reaction-left">
-                <button class="pill ${active.yawn ? "active-yawn" : ""}" data-react="yawn" data-id="${secret.id}"><span class="emoji">🥱</span> <span>${secret.reactions.yawn}</span></button>
-                <button class="pill ${active.nah ? "active-nah" : ""}" data-react="nah" data-id="${secret.id}"><span class="emoji">👎</span> <span>${secret.reactions.nah}</span></button>
-                <button class="pill ${active.yes ? "active-yes" : ""}" data-react="yes" data-id="${secret.id}"><span class="emoji">👍</span> <span>${secret.reactions.yes}</span></button>
-                <button class="pill ${active.omg ? "active-omg" : ""}" data-react="omg" data-id="${secret.id}"><span class="emoji">😱</span> <span>${secret.reactions.omg}</span></button>
+                <button class="pill ${active.yawn ? "active-yawn" : ""}" title="Yawn" data-react="yawn" data-id="${secret.id}"><span class="emoji">🥱</span> <span>${secret.reactions.yawn}</span></button>
+                <button class="pill ${active.nah ? "active-nah" : ""}" title="No" data-react="nah" data-id="${secret.id}"><span class="emoji">👎</span> <span>${secret.reactions.nah}</span></button>
+                <button class="pill ${active.yes ? "active-yes" : ""}" title="Yes" data-react="yes" data-id="${secret.id}"><span class="emoji">👍</span> <span>${secret.reactions.yes}</span></button>
+                <button class="pill ${active.omg ? "active-omg" : ""}" title="OMG" data-react="omg" data-id="${secret.id}"><span class="emoji">😱</span> <span>${secret.reactions.omg}</span></button>
               </div>
               <div class="reaction-left">
                 <div class="reaction-divider"></div>
@@ -5726,10 +5745,10 @@ const state = {
           <p class="secret-text">${escapeHtml(secret.text)}</p>
           <div class="reactions">
             <div class="reaction-left">
-              <button class="pill ${act.yawn ? "active-yawn" : ""}" data-react="yawn" data-id="${secret.id}"><span class="emoji">🥱</span> <span>${secret.reactions.yawn}</span></button>
-              <button class="pill ${act.nah ? "active-nah" : ""}" data-react="nah" data-id="${secret.id}"><span class="emoji">👎</span> <span>${secret.reactions.nah}</span></button>
-              <button class="pill ${act.yes ? "active-yes" : ""}" data-react="yes" data-id="${secret.id}"><span class="emoji">👍</span> <span>${secret.reactions.yes}</span></button>
-              <button class="pill ${act.omg ? "active-omg" : ""}" data-react="omg" data-id="${secret.id}"><span class="emoji">😱</span> <span>${secret.reactions.omg}</span></button>
+              <button class="pill ${act.yawn ? "active-yawn" : ""}" title="Yawn" data-react="yawn" data-id="${secret.id}"><span class="emoji">🥱</span> <span>${secret.reactions.yawn}</span></button>
+              <button class="pill ${act.nah ? "active-nah" : ""}" title="No" data-react="nah" data-id="${secret.id}"><span class="emoji">👎</span> <span>${secret.reactions.nah}</span></button>
+              <button class="pill ${act.yes ? "active-yes" : ""}" title="Yes" data-react="yes" data-id="${secret.id}"><span class="emoji">👍</span> <span>${secret.reactions.yes}</span></button>
+              <button class="pill ${act.omg ? "active-omg" : ""}" title="OMG" data-react="omg" data-id="${secret.id}"><span class="emoji">😱</span> <span>${secret.reactions.omg}</span></button>
             </div>
           </div>
         </section>
