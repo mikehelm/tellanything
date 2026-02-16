@@ -268,13 +268,15 @@
       align-items: center;
       gap: 12px;
       margin-top: 14px;
+      height: 44px;
+      overflow: visible;
     }
 
     .reaction-left {
       display: flex;
       gap: 6px;
-      flex-wrap: wrap;
-      align-items: flex-end;
+      flex-wrap: nowrap;
+      align-items: center;
     }
 
     .reaction-divider {
@@ -307,40 +309,24 @@
     .pill .emoji {
       font-size: 1em;
       line-height: 1;
-      transition: font-size 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
     }
 
-    /* Dock magnification on hover — pill being hovered */
+    /* Dock magnification — uses transform so card size stays fixed */
     .reaction-left:hover .pill.dock-near {
-      height: 38px;
-      padding: 0 12px;
-      font-size: 0.85rem;
-      gap: 6px;
-    }
-    .reaction-left:hover .pill.dock-near .emoji {
-      font-size: 1.2em;
+      transform: scale(1.25);
+      z-index: 2;
     }
 
     .reaction-left:hover .pill.dock-focus {
-      height: 50px;
-      padding: 0 18px;
-      font-size: 1.05rem;
-      gap: 9px;
+      transform: scale(1.6);
+      z-index: 3;
       border-color: rgba(145, 166, 210, 0.5);
     }
-    .reaction-left:hover .pill.dock-focus .emoji {
-      font-size: 1.5em;
-    }
 
-    /* Clicked/active pill stays large */
+    /* Clicked/active pill stays slightly enlarged */
     .pill.last-clicked {
-      height: 42px;
-      padding: 0 14px;
-      font-size: 0.9rem;
-      gap: 7px;
-    }
-    .pill.last-clicked .emoji {
-      font-size: 1.3em;
+      transform: scale(1.35);
+      z-index: 2;
     }
 
     .pill[title]:hover::after {
