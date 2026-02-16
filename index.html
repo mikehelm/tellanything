@@ -272,9 +272,9 @@
 
     .reaction-left {
       display: flex;
-      gap: 8px;
+      gap: 6px;
       flex-wrap: wrap;
-      align-items: center;
+      align-items: flex-end;
     }
 
     .reaction-divider {
@@ -284,28 +284,63 @@
     }
 
     .pill {
-      border: 1px solid rgba(145, 166, 210, 0.38);
+      border: 1px solid rgba(145, 166, 210, 0.25);
       background: rgba(11, 17, 32, 0.72);
       border-radius: 999px;
       color: #e7eeff;
-      height: 54px;
-      min-width: 76px;
-      padding: 0 20px;
+      height: 28px;
+      min-width: 0;
+      padding: 0 8px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 10px;
+      gap: 4px;
       font-weight: 700;
-      font-size: 1.1rem;
+      font-size: 0.72rem;
       cursor: pointer;
-      transition: all 0.2s ease;
+      transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
       user-select: none;
       position: relative;
+      transform-origin: center bottom;
     }
 
     .pill .emoji {
-      font-size: 1.6em;
+      font-size: 1em;
       line-height: 1;
+      transition: font-size 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    /* Dock magnification on hover — pill being hovered */
+    .reaction-left:hover .pill.dock-near {
+      height: 38px;
+      padding: 0 12px;
+      font-size: 0.85rem;
+      gap: 6px;
+    }
+    .reaction-left:hover .pill.dock-near .emoji {
+      font-size: 1.2em;
+    }
+
+    .reaction-left:hover .pill.dock-focus {
+      height: 50px;
+      padding: 0 18px;
+      font-size: 1.05rem;
+      gap: 9px;
+      border-color: rgba(145, 166, 210, 0.5);
+    }
+    .reaction-left:hover .pill.dock-focus .emoji {
+      font-size: 1.5em;
+    }
+
+    /* Clicked/active pill stays large */
+    .pill.last-clicked {
+      height: 42px;
+      padding: 0 14px;
+      font-size: 0.9rem;
+      gap: 7px;
+    }
+    .pill.last-clicked .emoji {
+      font-size: 1.3em;
     }
 
     .pill[title]:hover::after {
@@ -327,8 +362,12 @@
     }
 
     .pill.reply {
-      min-width: 112px;
-      border-color: rgba(111, 184, 255, 0.45);
+      min-width: 0;
+      border-color: rgba(111, 184, 255, 0.35);
+    }
+    .reaction-left:hover .pill.reply.dock-focus,
+    .reactions:hover .pill.reply.dock-focus {
+      min-width: 0;
     }
 
     .pill.active-yes {
@@ -706,7 +745,7 @@
         height: 100dvh;
       }
       .detail-main { padding: 12px; padding-bottom: 132px; }
-      .pill.reply { min-width: 94px; }
+      .pill.reply { min-width: 0; }
     }
   </style>
 </head>
@@ -5939,6 +5978,37 @@ const state = {
         if (e.key === "Escape" && byId.detail.classList.contains("open")) closeDetail();
       });
     }
+
+    // === Dock magnification for reaction pills ===
+    document.addEventListener('mousemove', function(e) {
+      const pills = document.querySelectorAll('.reaction-left .pill');
+      pills.forEach(pill => {
+        pill.classList.remove('dock-focus', 'dock-near');
+      });
+
+      const hovered = e.target.closest('.pill');
+      if (!hovered) return;
+      const container = hovered.closest('.reaction-left');
+      if (!container) return;
+
+      const allPills = Array.from(container.querySelectorAll('.pill'));
+      const idx = allPills.indexOf(hovered);
+      if (idx === -1) return;
+
+      hovered.classList.add('dock-focus');
+      if (idx > 0) allPills[idx - 1].classList.add('dock-near');
+      if (idx < allPills.length - 1) allPills[idx + 1].classList.add('dock-near');
+    });
+
+    // Track last clicked reaction pill
+    document.addEventListener('click', function(e) {
+      const pill = e.target.closest('.pill[data-react]');
+      if (!pill) return;
+      const container = pill.closest('.reactions') || pill.closest('.reaction-left');
+      if (!container) return;
+      container.querySelectorAll('.pill').forEach(p => p.classList.remove('last-clicked'));
+      pill.classList.add('last-clicked');
+    });
 
     init();
   </script>
